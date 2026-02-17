@@ -1,0 +1,1 @@
+"""Auctions game module."""

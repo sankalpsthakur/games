@@ -1,0 +1,1227 @@
+{
+  "config": {
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "n_seeds": 30,
+    "train_steps": 10000,
+    "eval_hands": 200
+  },
+  "per_profile": {
+    "balanced": {
+      "n": 30,
+      "mean_bb_per_100": -400.2805000000001,
+      "sd_bb_per_100": 329.05370415719216,
+      "se_bb_per_100": 60.07671213250853,
+      "ci95_norm": [
+        -518.0308557797168,
+        -282.5301442202833
+      ],
+      "ci95_bootstrap": [
+        -519.6432458333335,
+        -289.6342583333335
+      ],
+      "z_against_0": -6.6628230106387845,
+      "p_two_sided_norm": 2.6861624036200737e-11,
+      "wins_positive_seeds": 1,
+      "sign_test_p_two_sided": 5.774199962615967e-08,
+      "mean_win_rate": 0.5676666666666667,
+      "mean_showdown_rate": 0.7998333333333334
+    },
+    "calling_station": {
+      "n": 30,
+      "mean_bb_per_100": 713.1739999999999,
+      "sd_bb_per_100": 379.73063521123896,
+      "se_bb_per_100": 69.32901156032037,
+      "ci95_norm": [
+        577.289137341772,
+        849.0588626582278
+      ],
+      "ci95_bootstrap": [
+        576.0559958333332,
+        844.8181833333331
+      ],
+      "z_against_0": 10.28680467165605,
+      "p_two_sided_norm": 0.0,
+      "wins_positive_seeds": 30,
+      "sign_test_p_two_sided": 1.862645149230957e-09,
+      "mean_win_rate": 0.6114999999999999,
+      "mean_showdown_rate": 0.8364999999999999
+    },
+    "lag": {
+      "n": 30,
+      "mean_bb_per_100": 1001.7971666666666,
+      "sd_bb_per_100": 397.8480471163351,
+      "se_bb_per_100": 72.63678328833163,
+      "ci95_norm": [
+        859.4290714215366,
+        1144.1652619117965
+      ],
+      "ci95_bootstrap": [
+        855.9018416666665,
+        1140.8053208333333
+      ],
+      "z_against_0": 13.791871298733506,
+      "p_two_sided_norm": 0.0,
+      "wins_positive_seeds": 30,
+      "sign_test_p_two_sided": 1.862645149230957e-09,
+      "mean_win_rate": 0.6144999999999999,
+      "mean_showdown_rate": 0.8656666666666666
+    },
+    "nit": {
+      "n": 30,
+      "mean_bb_per_100": 174.65549999999993,
+      "sd_bb_per_100": 297.9722204170359,
+      "se_bb_per_100": 54.40203554410399,
+      "ci95_norm": [
+        68.02751033355612,
+        281.28348966644376
+      ],
+      "ci95_bootstrap": [
+        73.15695416666662,
+        282.7397874999998
+      ],
+      "z_against_0": 3.2104589148765563,
+      "p_two_sided_norm": 0.0013252321154446633,
+      "wins_positive_seeds": 18,
+      "sign_test_p_two_sided": 0.361594608053565,
+      "mean_win_rate": 0.6193333333333333,
+      "mean_showdown_rate": 0.7245
+    },
+    "tag": {
+      "n": 30,
+      "mean_bb_per_100": -577.1110000000001,
+      "sd_bb_per_100": 153.7852051390353,
+      "se_bb_per_100": 28.077208621736343,
+      "ci95_norm": [
+        -632.1423288986033,
+        -522.0796711013969
+      ],
+      "ci95_bootstrap": [
+        -632.1951499999999,
+        -523.9517791666667
+      ],
+      "z_against_0": -20.554429315783977,
+      "p_two_sided_norm": 0.0,
+      "wins_positive_seeds": 0,
+      "sign_test_p_two_sided": 1.862645149230957e-09,
+      "mean_win_rate": 0.5395,
+      "mean_showdown_rate": 0.8031666666666666
+    }
+  },
+  "pairwise_vs_balanced": {
+    "calling_station": {
+      "mean_diff_bb_per_100": 1113.4545,
+      "ci95_norm": [
+        1032.8152703493172,
+        1194.093729650683
+      ],
+      "p_two_sided_norm": 0.0
+    },
+    "lag": {
+      "mean_diff_bb_per_100": 1402.0776666666668,
+      "ci95_norm": [
+        1323.4793266895776,
+        1480.676006643756
+      ],
+      "p_two_sided_norm": 0.0
+    },
+    "nit": {
+      "mean_diff_bb_per_100": 574.936,
+      "ci95_norm": [
+        455.57588471418535,
+        694.2961152858147
+      ],
+      "p_two_sided_norm": 0.0
+    },
+    "tag": {
+      "mean_diff_bb_per_100": -176.83049999999997,
+      "ci95_norm": [
+        -333.08236107254925,
+        -20.57863892745067
+      ],
+      "p_two_sided_norm": 0.02654560366583869
+    }
+  },
+  "raw": [
+    {
+      "seed": 1,
+      "profile": "nit",
+      "bb_per_100": -24.600000000000087,
+      "win_rate": 0.5,
+      "showdown_rate": 0.93
+    },
+    {
+      "seed": 1,
+      "profile": "tag",
+      "bb_per_100": -484.8100000000001,
+      "win_rate": 0.455,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 1,
+      "profile": "lag",
+      "bb_per_100": 946.2549999999997,
+      "win_rate": 0.59,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 1,
+      "profile": "calling_station",
+      "bb_per_100": 179.1399999999997,
+      "win_rate": 0.565,
+      "showdown_rate": 0.94
+    },
+    {
+      "seed": 1,
+      "profile": "balanced",
+      "bb_per_100": -713.5950000000003,
+      "win_rate": 0.495,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 2,
+      "profile": "nit",
+      "bb_per_100": 521.2549999999999,
+      "win_rate": 0.725,
+      "showdown_rate": 0.525
+    },
+    {
+      "seed": 2,
+      "profile": "tag",
+      "bb_per_100": -812.64,
+      "win_rate": 0.595,
+      "showdown_rate": 0.66
+    },
+    {
+      "seed": 2,
+      "profile": "lag",
+      "bb_per_100": 1551.59,
+      "win_rate": 0.655,
+      "showdown_rate": 0.8
+    },
+    {
+      "seed": 2,
+      "profile": "calling_station",
+      "bb_per_100": 1000.9749999999999,
+      "win_rate": 0.655,
+      "showdown_rate": 0.735
+    },
+    {
+      "seed": 2,
+      "profile": "balanced",
+      "bb_per_100": -110.59000000000037,
+      "win_rate": 0.61,
+      "showdown_rate": 0.69
+    },
+    {
+      "seed": 3,
+      "profile": "nit",
+      "bb_per_100": 505.12499999999994,
+      "win_rate": 0.59,
+      "showdown_rate": 0.82
+    },
+    {
+      "seed": 3,
+      "profile": "tag",
+      "bb_per_100": -413.22,
+      "win_rate": 0.47,
+      "showdown_rate": 0.915
+    },
+    {
+      "seed": 3,
+      "profile": "lag",
+      "bb_per_100": 955.5400000000001,
+      "win_rate": 0.615,
+      "showdown_rate": 0.895
+    },
+    {
+      "seed": 3,
+      "profile": "calling_station",
+      "bb_per_100": 18.790000000000134,
+      "win_rate": 0.565,
+      "showdown_rate": 0.915
+    },
+    {
+      "seed": 3,
+      "profile": "balanced",
+      "bb_per_100": -795.98,
+      "win_rate": 0.51,
+      "showdown_rate": 0.91
+    },
+    {
+      "seed": 4,
+      "profile": "nit",
+      "bb_per_100": 515.6,
+      "win_rate": 0.715,
+      "showdown_rate": 0.565
+    },
+    {
+      "seed": 4,
+      "profile": "tag",
+      "bb_per_100": -520.0950000000001,
+      "win_rate": 0.595,
+      "showdown_rate": 0.685
+    },
+    {
+      "seed": 4,
+      "profile": "lag",
+      "bb_per_100": 1412.9699999999998,
+      "win_rate": 0.645,
+      "showdown_rate": 0.81
+    },
+    {
+      "seed": 4,
+      "profile": "calling_station",
+      "bb_per_100": 876.0349999999995,
+      "win_rate": 0.645,
+      "showdown_rate": 0.745
+    },
+    {
+      "seed": 4,
+      "profile": "balanced",
+      "bb_per_100": 21.854999999999762,
+      "win_rate": 0.61,
+      "showdown_rate": 0.71
+    },
+    {
+      "seed": 5,
+      "profile": "nit",
+      "bb_per_100": -110.05000000000007,
+      "win_rate": 0.57,
+      "showdown_rate": 0.84
+    },
+    {
+      "seed": 5,
+      "profile": "tag",
+      "bb_per_100": -530.8100000000001,
+      "win_rate": 0.48,
+      "showdown_rate": 0.94
+    },
+    {
+      "seed": 5,
+      "profile": "lag",
+      "bb_per_100": 665.3199999999997,
+      "win_rate": 0.58,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 5,
+      "profile": "calling_station",
+      "bb_per_100": 144.72999999999982,
+      "win_rate": 0.585,
+      "showdown_rate": 0.865
+    },
+    {
+      "seed": 5,
+      "profile": "balanced",
+      "bb_per_100": -700.6050000000002,
+      "win_rate": 0.51,
+      "showdown_rate": 0.92
+    },
+    {
+      "seed": 6,
+      "profile": "nit",
+      "bb_per_100": 281.46000000000004,
+      "win_rate": 0.645,
+      "showdown_rate": 0.68
+    },
+    {
+      "seed": 6,
+      "profile": "tag",
+      "bb_per_100": -604.035,
+      "win_rate": 0.575,
+      "showdown_rate": 0.745
+    },
+    {
+      "seed": 6,
+      "profile": "lag",
+      "bb_per_100": 1374.9899999999998,
+      "win_rate": 0.63,
+      "showdown_rate": 0.84
+    },
+    {
+      "seed": 6,
+      "profile": "calling_station",
+      "bb_per_100": 1209.8250000000003,
+      "win_rate": 0.65,
+      "showdown_rate": 0.79
+    },
+    {
+      "seed": 6,
+      "profile": "balanced",
+      "bb_per_100": -409.50999999999993,
+      "win_rate": 0.575,
+      "showdown_rate": 0.765
+    },
+    {
+      "seed": 7,
+      "profile": "nit",
+      "bb_per_100": -257.9549999999999,
+      "win_rate": 0.55,
+      "showdown_rate": 0.845
+    },
+    {
+      "seed": 7,
+      "profile": "tag",
+      "bb_per_100": -689.7649999999999,
+      "win_rate": 0.55,
+      "showdown_rate": 0.82
+    },
+    {
+      "seed": 7,
+      "profile": "lag",
+      "bb_per_100": 1206.585,
+      "win_rate": 0.615,
+      "showdown_rate": 0.86
+    },
+    {
+      "seed": 7,
+      "profile": "calling_station",
+      "bb_per_100": 1081.6399999999999,
+      "win_rate": 0.62,
+      "showdown_rate": 0.87
+    },
+    {
+      "seed": 7,
+      "profile": "balanced",
+      "bb_per_100": -186.38500000000005,
+      "win_rate": 0.555,
+      "showdown_rate": 0.82
+    },
+    {
+      "seed": 8,
+      "profile": "nit",
+      "bb_per_100": 318.5,
+      "win_rate": 0.61,
+      "showdown_rate": 0.765
+    },
+    {
+      "seed": 8,
+      "profile": "tag",
+      "bb_per_100": -528.5,
+      "win_rate": 0.555,
+      "showdown_rate": 0.795
+    },
+    {
+      "seed": 8,
+      "profile": "lag",
+      "bb_per_100": 1331.0,
+      "win_rate": 0.64,
+      "showdown_rate": 0.815
+    },
+    {
+      "seed": 8,
+      "profile": "calling_station",
+      "bb_per_100": 1212.0,
+      "win_rate": 0.62,
+      "showdown_rate": 0.855
+    },
+    {
+      "seed": 8,
+      "profile": "balanced",
+      "bb_per_100": -272.5,
+      "win_rate": 0.57,
+      "showdown_rate": 0.79
+    },
+    {
+      "seed": 9,
+      "profile": "nit",
+      "bb_per_100": -56.87000000000003,
+      "win_rate": 0.5,
+      "showdown_rate": 0.93
+    },
+    {
+      "seed": 9,
+      "profile": "tag",
+      "bb_per_100": -416.24,
+      "win_rate": 0.475,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 9,
+      "profile": "lag",
+      "bb_per_100": 703.7349999999999,
+      "win_rate": 0.575,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 9,
+      "profile": "calling_station",
+      "bb_per_100": 264.1599999999999,
+      "win_rate": 0.575,
+      "showdown_rate": 0.94
+    },
+    {
+      "seed": 9,
+      "profile": "balanced",
+      "bb_per_100": -772.2950000000001,
+      "win_rate": 0.51,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 10,
+      "profile": "nit",
+      "bb_per_100": 545.0749999999998,
+      "win_rate": 0.735,
+      "showdown_rate": 0.505
+    },
+    {
+      "seed": 10,
+      "profile": "tag",
+      "bb_per_100": -593.1400000000001,
+      "win_rate": 0.605,
+      "showdown_rate": 0.67
+    },
+    {
+      "seed": 10,
+      "profile": "lag",
+      "bb_per_100": 1497.985,
+      "win_rate": 0.645,
+      "showdown_rate": 0.815
+    },
+    {
+      "seed": 10,
+      "profile": "calling_station",
+      "bb_per_100": 1065.5449999999996,
+      "win_rate": 0.665,
+      "showdown_rate": 0.72
+    },
+    {
+      "seed": 10,
+      "profile": "balanced",
+      "bb_per_100": -104.6850000000002,
+      "win_rate": 0.61,
+      "showdown_rate": 0.695
+    },
+    {
+      "seed": 11,
+      "profile": "nit",
+      "bb_per_100": 208.0,
+      "win_rate": 0.635,
+      "showdown_rate": 0.7
+    },
+    {
+      "seed": 11,
+      "profile": "tag",
+      "bb_per_100": -653.5,
+      "win_rate": 0.57,
+      "showdown_rate": 0.755
+    },
+    {
+      "seed": 11,
+      "profile": "lag",
+      "bb_per_100": 1329.0,
+      "win_rate": 0.63,
+      "showdown_rate": 0.835
+    },
+    {
+      "seed": 11,
+      "profile": "calling_station",
+      "bb_per_100": 1257.0,
+      "win_rate": 0.645,
+      "showdown_rate": 0.805
+    },
+    {
+      "seed": 11,
+      "profile": "balanced",
+      "bb_per_100": -286.0,
+      "win_rate": 0.59,
+      "showdown_rate": 0.745
+    },
+    {
+      "seed": 12,
+      "profile": "nit",
+      "bb_per_100": 601.555,
+      "win_rate": 0.73,
+      "showdown_rate": 0.525
+    },
+    {
+      "seed": 12,
+      "profile": "tag",
+      "bb_per_100": -646.1600000000001,
+      "win_rate": 0.605,
+      "showdown_rate": 0.66
+    },
+    {
+      "seed": 12,
+      "profile": "lag",
+      "bb_per_100": 1453.9899999999998,
+      "win_rate": 0.645,
+      "showdown_rate": 0.81
+    },
+    {
+      "seed": 12,
+      "profile": "calling_station",
+      "bb_per_100": 966.0349999999996,
+      "win_rate": 0.66,
+      "showdown_rate": 0.72
+    },
+    {
+      "seed": 12,
+      "profile": "balanced",
+      "bb_per_100": -100.16500000000012,
+      "win_rate": 0.62,
+      "showdown_rate": 0.67
+    },
+    {
+      "seed": 13,
+      "profile": "nit",
+      "bb_per_100": 288.2199999999998,
+      "win_rate": 0.725,
+      "showdown_rate": 0.535
+    },
+    {
+      "seed": 13,
+      "profile": "tag",
+      "bb_per_100": -434.69500000000016,
+      "win_rate": 0.61,
+      "showdown_rate": 0.675
+    },
+    {
+      "seed": 13,
+      "profile": "lag",
+      "bb_per_100": 1463.5299999999997,
+      "win_rate": 0.64,
+      "showdown_rate": 0.83
+    },
+    {
+      "seed": 13,
+      "profile": "calling_station",
+      "bb_per_100": 810.3999999999999,
+      "win_rate": 0.655,
+      "showdown_rate": 0.725
+    },
+    {
+      "seed": 13,
+      "profile": "balanced",
+      "bb_per_100": -162.64500000000012,
+      "win_rate": 0.61,
+      "showdown_rate": 0.69
+    },
+    {
+      "seed": 14,
+      "profile": "nit",
+      "bb_per_100": -5.830000000000041,
+      "win_rate": 0.505,
+      "showdown_rate": 0.925
+    },
+    {
+      "seed": 14,
+      "profile": "tag",
+      "bb_per_100": -342.785,
+      "win_rate": 0.475,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 14,
+      "profile": "lag",
+      "bb_per_100": 653.2649999999999,
+      "win_rate": 0.58,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 14,
+      "profile": "calling_station",
+      "bb_per_100": 172.60499999999996,
+      "win_rate": 0.56,
+      "showdown_rate": 0.95
+    },
+    {
+      "seed": 14,
+      "profile": "balanced",
+      "bb_per_100": -833.3149999999999,
+      "win_rate": 0.505,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 15,
+      "profile": "nit",
+      "bb_per_100": 749.9799999999999,
+      "win_rate": 0.745,
+      "showdown_rate": 0.515
+    },
+    {
+      "seed": 15,
+      "profile": "tag",
+      "bb_per_100": -838.1600000000001,
+      "win_rate": 0.595,
+      "showdown_rate": 0.665
+    },
+    {
+      "seed": 15,
+      "profile": "lag",
+      "bb_per_100": 1246.5849999999998,
+      "win_rate": 0.63,
+      "showdown_rate": 0.825
+    },
+    {
+      "seed": 15,
+      "profile": "calling_station",
+      "bb_per_100": 964.0599999999996,
+      "win_rate": 0.645,
+      "showdown_rate": 0.76
+    },
+    {
+      "seed": 15,
+      "profile": "balanced",
+      "bb_per_100": -182.57500000000013,
+      "win_rate": 0.62,
+      "showdown_rate": 0.665
+    },
+    {
+      "seed": 16,
+      "profile": "nit",
+      "bb_per_100": -150.26000000000022,
+      "win_rate": 0.56,
+      "showdown_rate": 0.815
+    },
+    {
+      "seed": 16,
+      "profile": "tag",
+      "bb_per_100": -390.71500000000003,
+      "win_rate": 0.49,
+      "showdown_rate": 0.93
+    },
+    {
+      "seed": 16,
+      "profile": "lag",
+      "bb_per_100": 459.3099999999998,
+      "win_rate": 0.58,
+      "showdown_rate": 0.935
+    },
+    {
+      "seed": 16,
+      "profile": "calling_station",
+      "bb_per_100": 424.87999999999994,
+      "win_rate": 0.575,
+      "showdown_rate": 0.9
+    },
+    {
+      "seed": 16,
+      "profile": "balanced",
+      "bb_per_100": -291.7099999999999,
+      "win_rate": 0.515,
+      "showdown_rate": 0.92
+    },
+    {
+      "seed": 17,
+      "profile": "nit",
+      "bb_per_100": -12.844999999999999,
+      "win_rate": 0.495,
+      "showdown_rate": 0.925
+    },
+    {
+      "seed": 17,
+      "profile": "tag",
+      "bb_per_100": -329.81499999999994,
+      "win_rate": 0.47,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 17,
+      "profile": "lag",
+      "bb_per_100": 467.27,
+      "win_rate": 0.57,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 17,
+      "profile": "calling_station",
+      "bb_per_100": 255.64500000000004,
+      "win_rate": 0.56,
+      "showdown_rate": 0.95
+    },
+    {
+      "seed": 17,
+      "profile": "balanced",
+      "bb_per_100": -853.8299999999999,
+      "win_rate": 0.51,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 18,
+      "profile": "nit",
+      "bb_per_100": 631.94,
+      "win_rate": 0.725,
+      "showdown_rate": 0.54
+    },
+    {
+      "seed": 18,
+      "profile": "tag",
+      "bb_per_100": -704.8900000000002,
+      "win_rate": 0.6,
+      "showdown_rate": 0.665
+    },
+    {
+      "seed": 18,
+      "profile": "lag",
+      "bb_per_100": 1170.3649999999996,
+      "win_rate": 0.625,
+      "showdown_rate": 0.83
+    },
+    {
+      "seed": 18,
+      "profile": "calling_station",
+      "bb_per_100": 852.7749999999997,
+      "win_rate": 0.65,
+      "showdown_rate": 0.73
+    },
+    {
+      "seed": 18,
+      "profile": "balanced",
+      "bb_per_100": -215.77500000000023,
+      "win_rate": 0.61,
+      "showdown_rate": 0.685
+    },
+    {
+      "seed": 19,
+      "profile": "nit",
+      "bb_per_100": 41.41499999999991,
+      "win_rate": 0.495,
+      "showdown_rate": 0.925
+    },
+    {
+      "seed": 19,
+      "profile": "tag",
+      "bb_per_100": -461.29500000000013,
+      "win_rate": 0.47,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 19,
+      "profile": "lag",
+      "bb_per_100": 391.8149999999997,
+      "win_rate": 0.565,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 19,
+      "profile": "calling_station",
+      "bb_per_100": 263.1249999999999,
+      "win_rate": 0.56,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 19,
+      "profile": "balanced",
+      "bb_per_100": -885.115,
+      "win_rate": 0.515,
+      "showdown_rate": 0.94
+    },
+    {
+      "seed": 20,
+      "profile": "nit",
+      "bb_per_100": 675.0849999999998,
+      "win_rate": 0.74,
+      "showdown_rate": 0.52
+    },
+    {
+      "seed": 20,
+      "profile": "tag",
+      "bb_per_100": -886.21,
+      "win_rate": 0.575,
+      "showdown_rate": 0.695
+    },
+    {
+      "seed": 20,
+      "profile": "lag",
+      "bb_per_100": 1104.485,
+      "win_rate": 0.625,
+      "showdown_rate": 0.82
+    },
+    {
+      "seed": 20,
+      "profile": "calling_station",
+      "bb_per_100": 894.5349999999997,
+      "win_rate": 0.645,
+      "showdown_rate": 0.745
+    },
+    {
+      "seed": 20,
+      "profile": "balanced",
+      "bb_per_100": -145.65000000000015,
+      "win_rate": 0.62,
+      "showdown_rate": 0.675
+    },
+    {
+      "seed": 21,
+      "profile": "nit",
+      "bb_per_100": -32.0,
+      "win_rate": 0.59,
+      "showdown_rate": 0.78
+    },
+    {
+      "seed": 21,
+      "profile": "tag",
+      "bb_per_100": -529.0,
+      "win_rate": 0.555,
+      "showdown_rate": 0.795
+    },
+    {
+      "seed": 21,
+      "profile": "lag",
+      "bb_per_100": 1082.5,
+      "win_rate": 0.625,
+      "showdown_rate": 0.825
+    },
+    {
+      "seed": 21,
+      "profile": "calling_station",
+      "bb_per_100": 961.9999999999999,
+      "win_rate": 0.605,
+      "showdown_rate": 0.86
+    },
+    {
+      "seed": 21,
+      "profile": "balanced",
+      "bb_per_100": -74.0,
+      "win_rate": 0.585,
+      "showdown_rate": 0.785
+    },
+    {
+      "seed": 22,
+      "profile": "nit",
+      "bb_per_100": 26.0,
+      "win_rate": 0.625,
+      "showdown_rate": 0.725
+    },
+    {
+      "seed": 22,
+      "profile": "tag",
+      "bb_per_100": -741.5,
+      "win_rate": 0.545,
+      "showdown_rate": 0.79
+    },
+    {
+      "seed": 22,
+      "profile": "lag",
+      "bb_per_100": 720.0,
+      "win_rate": 0.63,
+      "showdown_rate": 0.83
+    },
+    {
+      "seed": 22,
+      "profile": "calling_station",
+      "bb_per_100": 590.0,
+      "win_rate": 0.595,
+      "showdown_rate": 0.845
+    },
+    {
+      "seed": 22,
+      "profile": "balanced",
+      "bb_per_100": -549.0,
+      "win_rate": 0.58,
+      "showdown_rate": 0.765
+    },
+    {
+      "seed": 23,
+      "profile": "nit",
+      "bb_per_100": -223.5,
+      "win_rate": 0.59,
+      "showdown_rate": 0.765
+    },
+    {
+      "seed": 23,
+      "profile": "tag",
+      "bb_per_100": -674.0,
+      "win_rate": 0.55,
+      "showdown_rate": 0.795
+    },
+    {
+      "seed": 23,
+      "profile": "lag",
+      "bb_per_100": 978.9999999999999,
+      "win_rate": 0.605,
+      "showdown_rate": 0.855
+    },
+    {
+      "seed": 23,
+      "profile": "calling_station",
+      "bb_per_100": 1264.0,
+      "win_rate": 0.625,
+      "showdown_rate": 0.85
+    },
+    {
+      "seed": 23,
+      "profile": "balanced",
+      "bb_per_100": -216.5,
+      "win_rate": 0.59,
+      "showdown_rate": 0.76
+    },
+    {
+      "seed": 24,
+      "profile": "nit",
+      "bb_per_100": 299.92499999999995,
+      "win_rate": 0.72,
+      "showdown_rate": 0.53
+    },
+    {
+      "seed": 24,
+      "profile": "tag",
+      "bb_per_100": -723.8900000000001,
+      "win_rate": 0.595,
+      "showdown_rate": 0.66
+    },
+    {
+      "seed": 24,
+      "profile": "lag",
+      "bb_per_100": 1084.455,
+      "win_rate": 0.63,
+      "showdown_rate": 0.81
+    },
+    {
+      "seed": 24,
+      "profile": "calling_station",
+      "bb_per_100": 867.6599999999999,
+      "win_rate": 0.65,
+      "showdown_rate": 0.74
+    },
+    {
+      "seed": 24,
+      "profile": "balanced",
+      "bb_per_100": -110.87000000000012,
+      "win_rate": 0.61,
+      "showdown_rate": 0.705
+    },
+    {
+      "seed": 25,
+      "profile": "nit",
+      "bb_per_100": -102.33000000000003,
+      "win_rate": 0.5,
+      "showdown_rate": 0.93
+    },
+    {
+      "seed": 25,
+      "profile": "tag",
+      "bb_per_100": -492.80000000000007,
+      "win_rate": 0.46,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 25,
+      "profile": "lag",
+      "bb_per_100": 340.27,
+      "win_rate": 0.57,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 25,
+      "profile": "calling_station",
+      "bb_per_100": 369.615,
+      "win_rate": 0.565,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 25,
+      "profile": "balanced",
+      "bb_per_100": -923.375,
+      "win_rate": 0.515,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 26,
+      "profile": "nit",
+      "bb_per_100": -158.83000000000004,
+      "win_rate": 0.5,
+      "showdown_rate": 0.93
+    },
+    {
+      "seed": 26,
+      "profile": "tag",
+      "bb_per_100": -510.29999999999995,
+      "win_rate": 0.455,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 26,
+      "profile": "lag",
+      "bb_per_100": 199.78000000000006,
+      "win_rate": 0.565,
+      "showdown_rate": 0.96
+    },
+    {
+      "seed": 26,
+      "profile": "calling_station",
+      "bb_per_100": 372.14,
+      "win_rate": 0.565,
+      "showdown_rate": 0.955
+    },
+    {
+      "seed": 26,
+      "profile": "balanced",
+      "bb_per_100": -963.35,
+      "win_rate": 0.515,
+      "showdown_rate": 0.945
+    },
+    {
+      "seed": 27,
+      "profile": "nit",
+      "bb_per_100": 67.77000000000001,
+      "win_rate": 0.61,
+      "showdown_rate": 0.765
+    },
+    {
+      "seed": 27,
+      "profile": "tag",
+      "bb_per_100": -432.71000000000004,
+      "win_rate": 0.5,
+      "showdown_rate": 0.87
+    },
+    {
+      "seed": 27,
+      "profile": "lag",
+      "bb_per_100": 511.96499999999975,
+      "win_rate": 0.615,
+      "showdown_rate": 0.835
+    },
+    {
+      "seed": 27,
+      "profile": "calling_station",
+      "bb_per_100": 496.0249999999999,
+      "win_rate": 0.58,
+      "showdown_rate": 0.88
+    },
+    {
+      "seed": 27,
+      "profile": "balanced",
+      "bb_per_100": -849.5450000000002,
+      "win_rate": 0.565,
+      "showdown_rate": 0.825
+    },
+    {
+      "seed": 28,
+      "profile": "nit",
+      "bb_per_100": 53.96499999999988,
+      "win_rate": 0.65,
+      "showdown_rate": 0.66
+    },
+    {
+      "seed": 28,
+      "profile": "tag",
+      "bb_per_100": -466.0899999999999,
+      "win_rate": 0.575,
+      "showdown_rate": 0.735
+    },
+    {
+      "seed": 28,
+      "profile": "lag",
+      "bb_per_100": 1415.2199999999998,
+      "win_rate": 0.65,
+      "showdown_rate": 0.81
+    },
+    {
+      "seed": 28,
+      "profile": "calling_station",
+      "bb_per_100": 782.8499999999999,
+      "win_rate": 0.615,
+      "showdown_rate": 0.79
+    },
+    {
+      "seed": 28,
+      "profile": "balanced",
+      "bb_per_100": -68.695,
+      "win_rate": 0.59,
+      "showdown_rate": 0.755
+    },
+    {
+      "seed": 29,
+      "profile": "nit",
+      "bb_per_100": 124.36499999999995,
+      "win_rate": 0.705,
+      "showdown_rate": 0.55
+    },
+    {
+      "seed": 29,
+      "profile": "tag",
+      "bb_per_100": -831.56,
+      "win_rate": 0.59,
+      "showdown_rate": 0.67
+    },
+    {
+      "seed": 29,
+      "profile": "lag",
+      "bb_per_100": 1306.6399999999999,
+      "win_rate": 0.64,
+      "showdown_rate": 0.81
+    },
+    {
+      "seed": 29,
+      "profile": "calling_station",
+      "bb_per_100": 867.0299999999997,
+      "win_rate": 0.645,
+      "showdown_rate": 0.74
+    },
+    {
+      "seed": 29,
+      "profile": "balanced",
+      "bb_per_100": -130.51000000000028,
+      "win_rate": 0.625,
+      "showdown_rate": 0.66
+    },
+    {
+      "seed": 30,
+      "profile": "nit",
+      "bb_per_100": -80.5,
+      "win_rate": 0.595,
+      "showdown_rate": 0.77
+    },
+    {
+      "seed": 30,
+      "profile": "tag",
+      "bb_per_100": -630.0,
+      "win_rate": 0.545,
+      "showdown_rate": 0.805
+    },
+    {
+      "seed": 30,
+      "profile": "lag",
+      "bb_per_100": 1028.5,
+      "win_rate": 0.625,
+      "showdown_rate": 0.82
+    },
+    {
+      "seed": 30,
+      "profile": "calling_station",
+      "bb_per_100": 910.0,
+      "win_rate": 0.6,
+      "showdown_rate": 0.865
+    },
+    {
+      "seed": 30,
+      "profile": "balanced",
+      "bb_per_100": -121.50000000000001,
+      "win_rate": 0.585,
+      "showdown_rate": 0.78
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+"""Crisis Negotiations game module."""

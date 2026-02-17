@@ -1,0 +1,1 @@
+"""Trust Game game module."""

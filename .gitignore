@@ -1,0 +1,21 @@
+.DS_Store
+**/.DS_Store
+
+# Python cache/build
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+**/.venv/
+
+# Local logs and temp files
+*.log
+*.mp4
+tmp/
+
+# Large local training artifacts
+/chess/logs/
+/poker/logs/

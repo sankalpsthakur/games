@@ -1,0 +1,3835 @@
+{
+  "config": {
+    "algorithms": [
+      "PPO",
+      "A2C",
+      "DQN"
+    ],
+    "eval_steps": 250,
+    "n_seeds": 30,
+    "seed_start": 1,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "sensitivity_eval_steps": 125,
+    "tell_scales": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "train_steps": 350
+  },
+  "game": "cournot",
+  "generated_at_utc": "2026-02-17T23:02:55.066581+00:00",
+  "pairwise": {
+    "A2C_minus_DQN": {
+      "ci95": [
+        -0.06235751011174227,
+        0.1011997651733023
+      ],
+      "mean_diff": 0.01942112753078001,
+      "n": 30,
+      "p_vs_zero": 0.6415957256048181,
+      "sd_diff": 0.22853063550433958,
+      "se_diff": 0.041723794715572596,
+      "z_vs_zero": 0.4654688688594149
+    },
+    "PPO_minus_A2C": {
+      "ci95": [
+        -0.09761627915673449,
+        0.025488981138699664
+      ],
+      "mean_diff": -0.036063649009017415,
+      "n": 30,
+      "p_vs_zero": 0.25081881480908774,
+      "sd_diff": 0.17200900002896527,
+      "se_diff": 0.03140440313659035,
+      "z_vs_zero": -1.1483628219954425
+    },
+    "PPO_minus_DQN": {
+      "ci95": [
+        -0.09474722322607604,
+        0.061462180269601215
+      ],
+      "mean_diff": -0.01664252147823741,
+      "n": 30,
+      "p_vs_zero": 0.6762132072232743,
+      "sd_diff": 0.218263811196451,
+      "se_diff": 0.03984933762644828,
+      "z_vs_zero": -0.4176360880636483
+    }
+  },
+  "per_algorithm": {
+    "A2C": {
+      "ci95": [
+        -0.44833088788057096,
+        -0.23869792589231617
+      ],
+      "mean": -0.3435144068864436,
+      "n": 30,
+      "p_vs_zero": 1.3317968949877468e-10,
+      "sd": 0.29290995427956684,
+      "se": 0.05347779642557521,
+      "z_vs_zero": -6.423495915066563
+    },
+    "DQN": {
+      "ci95": [
+        -0.4751182937498637,
+        -0.2507527750845835
+      ],
+      "mean": -0.3629355344172236,
+      "n": 30,
+      "p_vs_zero": 2.2824186984848893e-10,
+      "sd": 0.31349504004928663,
+      "se": 0.057236101700326586,
+      "z_vs_zero": -6.341024696571058
+    },
+    "PPO": {
+      "ci95": [
+        -0.48760819768995567,
+        -0.27154791410096635
+      ],
+      "mean": -0.379578055895461,
+      "n": 30,
+      "p_vs_zero": 5.70943292643733e-12,
+      "sd": 0.3018905385271753,
+      "se": 0.05511741928290544,
+      "z_vs_zero": -6.88671677364231
+    }
+  },
+  "seed_results": [
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.36468389510890276,
+      "optimal_action_rate": 0.08,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 1,
+      "total_reward": -91.17097377722568
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.36468389510890276,
+      "optimal_action_rate": 0.08,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 1,
+      "total_reward": -91.17097377722568
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.36468389510890276,
+      "optimal_action_rate": 0.08,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 1,
+      "total_reward": -91.17097377722568
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.46944872908680874,
+      "optimal_action_rate": 0.016,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 2,
+      "total_reward": -117.36218227170218
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.44916717080539303,
+      "optimal_action_rate": 0.016,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 2,
+      "total_reward": -112.29179270134826
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": 0.2817257103402902,
+      "optimal_action_rate": 0.428,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 2,
+      "total_reward": 70.43142758507256
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5407375380552184,
+      "optimal_action_rate": 0.012,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 3,
+      "total_reward": -135.1843845138046
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.5407375380552184,
+      "optimal_action_rate": 0.012,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 3,
+      "total_reward": -135.1843845138046
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.5407375380552184,
+      "optimal_action_rate": 0.012,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 3,
+      "total_reward": -135.1843845138046
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.7090220568679833,
+      "optimal_action_rate": 0.016,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 4,
+      "total_reward": -177.2555142169958
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.16471900926559874,
+      "optimal_action_rate": 0.128,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 4,
+      "total_reward": -41.179752316399686
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.4430475552886203,
+      "optimal_action_rate": 0.08,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 4,
+      "total_reward": -110.76188882215507
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.445218091327037,
+      "optimal_action_rate": 0.056,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 5,
+      "total_reward": -111.30452283175924
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.23134622261372312,
+      "optimal_action_rate": 0.148,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 5,
+      "total_reward": -57.83655565343078
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.2093089895586855,
+      "optimal_action_rate": 0.16,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 5,
+      "total_reward": -52.32724738967137
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.3411347676573826,
+      "optimal_action_rate": 0.076,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 6,
+      "total_reward": -85.28369191434565
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.3411347676573826,
+      "optimal_action_rate": 0.076,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 6,
+      "total_reward": -85.28369191434565
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.3411347676573826,
+      "optimal_action_rate": 0.076,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 6,
+      "total_reward": -85.28369191434565
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.4482173753722258,
+      "optimal_action_rate": 0.06,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 7,
+      "total_reward": -112.05434384305644
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.4482173753722258,
+      "optimal_action_rate": 0.06,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 7,
+      "total_reward": -112.05434384305644
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.4482173753722258,
+      "optimal_action_rate": 0.06,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 7,
+      "total_reward": -112.05434384305644
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.1990215667758052,
+      "optimal_action_rate": 0.16,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 8,
+      "total_reward": -49.7553916939513
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.40078622582610157,
+      "optimal_action_rate": 0.06,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 8,
+      "total_reward": -100.1965564565254
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.6003293486343936,
+      "optimal_action_rate": 0.012,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 8,
+      "total_reward": -150.0823371585984
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5845749910130308,
+      "optimal_action_rate": 0.012,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 9,
+      "total_reward": -146.14374775325768
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.5783908118079965,
+      "optimal_action_rate": 0.012,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 9,
+      "total_reward": -144.5977029519991
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.5626221663816033,
+      "optimal_action_rate": 0.036,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 9,
+      "total_reward": -140.65554159540085
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.008132719459960202,
+      "optimal_action_rate": 0.216,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 10,
+      "total_reward": -2.0331798649900503
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.008132719459960202,
+      "optimal_action_rate": 0.216,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 10,
+      "total_reward": -2.0331798649900503
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.008132719459960202,
+      "optimal_action_rate": 0.216,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 10,
+      "total_reward": -2.0331798649900503
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5833717818033145,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 11,
+      "total_reward": -145.84294545082864
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.5833717818033145,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 11,
+      "total_reward": -145.84294545082864
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.581562841345723,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 11,
+      "total_reward": -145.39071033643074
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": 0.5734283081784413,
+      "optimal_action_rate": 0.544,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 12,
+      "total_reward": 143.35707704461032
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": 0.5734283081784413,
+      "optimal_action_rate": 0.544,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 12,
+      "total_reward": 143.35707704461032
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": 0.5736521140370813,
+      "optimal_action_rate": 0.544,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 12,
+      "total_reward": 143.4130285092703
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.6166545627424451,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 13,
+      "total_reward": -154.16364068561128
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.6166545627424451,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 13,
+      "total_reward": -154.16364068561128
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.6166545627424451,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 13,
+      "total_reward": -154.16364068561128
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5843536060356388,
+      "optimal_action_rate": 0.016,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 14,
+      "total_reward": -146.0884015089097
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.7354487610095937,
+      "optimal_action_rate": 0.0,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 14,
+      "total_reward": -183.86219025239842
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.5785783187634972,
+      "optimal_action_rate": 0.016,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 14,
+      "total_reward": -144.6445796908743
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5395884019622142,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 15,
+      "total_reward": -134.89710049055356
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.49143171001591424,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 15,
+      "total_reward": -122.85792750397856
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.4746441840730431,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 15,
+      "total_reward": -118.66104601826078
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.7161692698797926,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 16,
+      "total_reward": -179.04231746994813
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.7161692698797926,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 16,
+      "total_reward": -179.04231746994813
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.7161692698797926,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 16,
+      "total_reward": -179.04231746994813
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.38125734971804487,
+      "optimal_action_rate": 0.056,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 17,
+      "total_reward": -95.31433742951121
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.38125734971804487,
+      "optimal_action_rate": 0.056,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 17,
+      "total_reward": -95.31433742951121
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.38125734971804487,
+      "optimal_action_rate": 0.056,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 17,
+      "total_reward": -95.31433742951121
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.6893412138416433,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 18,
+      "total_reward": -172.3353034604108
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.6893412138416433,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 18,
+      "total_reward": -172.3353034604108
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.6893412138416433,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 18,
+      "total_reward": -172.3353034604108
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.48615459267630506,
+      "optimal_action_rate": 0.012,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 19,
+      "total_reward": -121.53864816907627
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.48615459267630506,
+      "optimal_action_rate": 0.012,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 19,
+      "total_reward": -121.53864816907627
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.48615459267630506,
+      "optimal_action_rate": 0.012,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 19,
+      "total_reward": -121.53864816907627
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": 0.13124317050143866,
+      "optimal_action_rate": 0.344,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 20,
+      "total_reward": 32.81079262535967
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.1718672536012299,
+      "optimal_action_rate": 0.18,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 20,
+      "total_reward": -42.96681340030747
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.25314829475723843,
+      "optimal_action_rate": 0.1,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 20,
+      "total_reward": -63.28707368930961
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.10407061442436136,
+      "optimal_action_rate": 0.22,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 21,
+      "total_reward": -26.017653606090338
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.10407061442436136,
+      "optimal_action_rate": 0.22,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 21,
+      "total_reward": -26.017653606090338
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.5476697189704978,
+      "optimal_action_rate": 0.044,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 21,
+      "total_reward": -136.91742974262445
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.16494680371517906,
+      "optimal_action_rate": 0.148,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 22,
+      "total_reward": -41.23670092879476
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.07082065435619532,
+      "optimal_action_rate": 0.172,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 22,
+      "total_reward": -17.70516358904883
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.13580166382815673,
+      "optimal_action_rate": 0.156,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 22,
+      "total_reward": -33.95041595703918
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5486644367914881,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 23,
+      "total_reward": -137.16610919787203
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.5125978415006627,
+      "optimal_action_rate": 0.016,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 23,
+      "total_reward": -128.14946037516566
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.15163667987034388,
+      "optimal_action_rate": 0.16,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 23,
+      "total_reward": -37.90916996758597
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5980440498343363,
+      "optimal_action_rate": 0.016,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 24,
+      "total_reward": -149.51101245858408
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.0014088226605276297,
+      "optimal_action_rate": 0.244,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 24,
+      "total_reward": -0.35220566513190743
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.6733191845206483,
+      "optimal_action_rate": 0.0,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 24,
+      "total_reward": -168.32979613016207
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.6718843341400407,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 25,
+      "total_reward": -167.97108353501017
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.6776015234956128,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 25,
+      "total_reward": -169.4003808739032
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.6512999510676284,
+      "optimal_action_rate": 0.0,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 25,
+      "total_reward": -162.8249877669071
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.42065322836930985,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 26,
+      "total_reward": -105.16330709232746
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.42065322836930985,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 26,
+      "total_reward": -105.16330709232746
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.42065322836930985,
+      "optimal_action_rate": 0.012,
+      "profile_name": "tricky",
+      "profile_traits": {
+        "aggression": 0.63,
+        "bluff_rate": 0.86,
+        "patience": 0.45,
+        "tightness": 0.4,
+        "tilt_resistance": 0.55
+      },
+      "seed": 26,
+      "total_reward": -105.16330709232746
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": 0.062280405276595105,
+      "optimal_action_rate": 0.264,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 27,
+      "total_reward": 15.570101319148776
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": 0.062280405276595105,
+      "optimal_action_rate": 0.264,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 27,
+      "total_reward": 15.570101319148776
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": 0.0027782412134316026,
+      "optimal_action_rate": 0.272,
+      "profile_name": "aggressive",
+      "profile_traits": {
+        "aggression": 0.82,
+        "bluff_rate": 0.7,
+        "patience": 0.32,
+        "tightness": 0.28,
+        "tilt_resistance": 0.42
+      },
+      "seed": 27,
+      "total_reward": 0.6945603033579006
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": 0.0719188933922402,
+      "optimal_action_rate": 0.3,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 28,
+      "total_reward": 17.97972334806005
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": 0.08094831598695042,
+      "optimal_action_rate": 0.3,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 28,
+      "total_reward": 20.237078996737605
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": 0.20653051557892546,
+      "optimal_action_rate": 0.356,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 28,
+      "total_reward": 51.63262889473137
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.5596252718971074,
+      "optimal_action_rate": 0.0,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 29,
+      "total_reward": -139.90631797427685
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.38468311431086954,
+      "optimal_action_rate": 0.088,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 29,
+      "total_reward": -96.17077857771739
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.5772164467843124,
+      "optimal_action_rate": 0.0,
+      "profile_name": "composed",
+      "profile_traits": {
+        "aggression": 0.44,
+        "bluff_rate": 0.35,
+        "patience": 0.8,
+        "tightness": 0.62,
+        "tilt_resistance": 0.88
+      },
+      "seed": 29,
+      "total_reward": -144.3041116960781
+    },
+    {
+      "algorithm": "PPO",
+      "mean_reward": -0.4512412056569687,
+      "optimal_action_rate": 0.024,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 30,
+      "total_reward": -112.81030141424218
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.4512412056569687,
+      "optimal_action_rate": 0.024,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 30,
+      "total_reward": -112.81030141424218
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.49943075696081335,
+      "optimal_action_rate": 0.024,
+      "profile_name": "tight",
+      "profile_traits": {
+        "aggression": 0.28,
+        "bluff_rate": 0.22,
+        "patience": 0.74,
+        "tightness": 0.84,
+        "tilt_resistance": 0.76
+      },
+      "seed": 30,
+      "total_reward": -124.85768924020334
+    }
+  ],
+  "state_schema": {
+    "base_state_dim": 10,
+    "game_spec": {
+      "base_state_dim": 10,
+      "difficulty": 0.63,
+      "episode_steps": 76,
+      "missed": true,
+      "n_actions": 9,
+      "name": "cournot",
+      "profile_weight": 0.33,
+      "reward_noise": 0.15,
+      "step_seconds": 2,
+      "tell_weight": 0.3
+    },
+    "profile_trait_names": [
+      "aggression",
+      "tightness",
+      "bluff_rate",
+      "patience",
+      "tilt_resistance"
+    ],
+    "state_dim": 23,
+    "tell_dim": 8,
+    "tell_interval_seconds": 10
+  },
+  "tell_sensitivity": {
+    "per_algorithm": {
+      "A2C": [
+        {
+          "ci95": [
+            -0.3655747394185183,
+            -0.15244311588599074
+          ],
+          "mean": -0.25900892765225453,
+          "n": 30,
+          "p_vs_zero": 1.8998714015339146e-06,
+          "sd": 0.29779846409812305,
+          "se": 0.05437031212564478,
+          "tell_scale": 0.0,
+          "z_vs_zero": -4.763793282144652
+        },
+        {
+          "ci95": [
+            -0.3895767854146966,
+            -0.2428192572123446
+          ],
+          "mean": -0.3161980213135206,
+          "n": 30,
+          "p_vs_zero": 0.0,
+          "sd": 0.2050571650003285,
+          "se": 0.03743814494957959,
+          "tell_scale": 0.5,
+          "z_vs_zero": -8.445878441342787
+        },
+        {
+          "ci95": [
+            -0.4431501078333221,
+            -0.2316048447791114
+          ],
+          "mean": -0.33737747630621673,
+          "n": 30,
+          "p_vs_zero": 4.0598191475282874e-10,
+          "sd": 0.29558191966366176,
+          "se": 0.053965628330155786,
+          "tell_scale": 1.0,
+          "z_vs_zero": -6.251710333884716
+        },
+        {
+          "ci95": [
+            -0.49279136264214424,
+            -0.2925256459988775
+          ],
+          "mean": -0.39265850432051086,
+          "n": 30,
+          "p_vs_zero": 1.509903313490213e-14,
+          "sd": 0.27982155739911985,
+          "se": 0.05108819302124152,
+          "tell_scale": 1.5,
+          "z_vs_zero": -7.685895333139905
+        }
+      ],
+      "DQN": [
+        {
+          "ci95": [
+            -0.3855584731289031,
+            -0.18625026192477045
+          ],
+          "mean": -0.2859043675268368,
+          "n": 30,
+          "p_vs_zero": 1.8747837726706962e-08,
+          "sd": 0.2784836815625188,
+          "se": 0.05084393142962569,
+          "tell_scale": 0.0,
+          "z_vs_zero": -5.623175853790219
+        },
+        {
+          "ci95": [
+            -0.3852064397052254,
+            -0.20012507282192327
+          ],
+          "mean": -0.29266575626357433,
+          "n": 30,
+          "p_vs_zero": 5.695899307767149e-10,
+          "sd": 0.2586052031017199,
+          "se": 0.04721463440900565,
+          "tell_scale": 0.5,
+          "z_vs_zero": -6.19862379380728
+        },
+        {
+          "ci95": [
+            -0.47202084792864163,
+            -0.24414430471193763
+          ],
+          "mean": -0.3580825763202896,
+          "n": 30,
+          "p_vs_zero": 7.281717451235181e-10,
+          "sd": 0.3184008240971674,
+          "se": 0.05813177122875102,
+          "tell_scale": 1.0,
+          "z_vs_zero": -6.159842866497552
+        },
+        {
+          "ci95": [
+            -0.49145087169660073,
+            -0.2665591546480326
+          ],
+          "mean": -0.37900501317231666,
+          "n": 30,
+          "p_vs_zero": 3.940736625906993e-11,
+          "sd": 0.3142302714886988,
+          "se": 0.0573703359817776,
+          "tell_scale": 1.5,
+          "z_vs_zero": -6.606288889308564
+        }
+      ],
+      "PPO": [
+        {
+          "ci95": [
+            -0.3833194637367057,
+            -0.1662463379673748
+          ],
+          "mean": -0.27478290085204027,
+          "n": 30,
+          "p_vs_zero": 6.971784738407649e-07,
+          "sd": 0.3033057337041289,
+          "se": 0.05537579739013544,
+          "tell_scale": 0.0,
+          "z_vs_zero": -4.962147974432413
+        },
+        {
+          "ci95": [
+            -0.37348443284908095,
+            -0.18725930431252447
+          ],
+          "mean": -0.2803718685808027,
+          "n": 30,
+          "p_vs_zero": 3.596240638614745e-09,
+          "sd": 0.26020332569839544,
+          "se": 0.04750641034095829,
+          "tell_scale": 0.5,
+          "z_vs_zero": -5.901769183749005
+        },
+        {
+          "ci95": [
+            -0.4849627956351137,
+            -0.26785966592537913
+          ],
+          "mean": -0.3764112307802464,
+          "n": 30,
+          "p_vs_zero": 1.0722311927224837e-11,
+          "sd": 0.3033476567525297,
+          "se": 0.05538345145656495,
+          "tell_scale": 1.0,
+          "z_vs_zero": -6.796456719123958
+        },
+        {
+          "ci95": [
+            -0.47055214009807766,
+            -0.23820721621227703
+          ],
+          "mean": -0.35437967815517735,
+          "n": 30,
+          "p_vs_zero": 2.246418606688394e-09,
+          "sd": 0.3246442753420253,
+          "se": 0.059271664256581806,
+          "tell_scale": 1.5,
+          "z_vs_zero": -5.97890547869719
+        }
+      ]
+    },
+    "raw": [
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.19440802108734526,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.02328922504593208,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.33238276374400616,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.11756004336515528,
+        "seed": 1,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.19440802108734526,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.02328922504593208,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.33238276374400616,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.11756004336515528,
+        "seed": 1,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.19440802108734526,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.02328922504593208,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.33238276374400616,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.11756004336515528,
+        "seed": 1,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3960304741217112,
+        "seed": 2,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.31919997704414527,
+        "seed": 2,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.46633629025743967,
+        "seed": 2,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.37715994890547755,
+        "seed": 2,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4595540841236906,
+        "seed": 2,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.15748288095362786,
+        "seed": 2,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.45144586556093913,
+        "seed": 2,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3859557696373201,
+        "seed": 2,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6095741731584594,
+        "seed": 2,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.24254713965252087,
+        "seed": 2,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.3202980190912064,
+        "seed": 2,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.012513991272523466,
+        "seed": 2,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5066248177267496,
+        "seed": 3,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.25212281795122304,
+        "seed": 3,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.54557100030686,
+        "seed": 3,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6039044554474996,
+        "seed": 3,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5066248177267496,
+        "seed": 3,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.25212281795122304,
+        "seed": 3,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.54557100030686,
+        "seed": 3,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6039044554474996,
+        "seed": 3,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4993339345757248,
+        "seed": 3,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.25212281795122304,
+        "seed": 3,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.54557100030686,
+        "seed": 3,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6039044554474996,
+        "seed": 3,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.39530255329244435,
+        "seed": 4,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.2769673331488461,
+        "seed": 4,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.7098825864145863,
+        "seed": 4,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4189979755151437,
+        "seed": 4,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.40752015711523987,
+        "seed": 4,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2667069924140598,
+        "seed": 4,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.15879315239145436,
+        "seed": 4,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.31898097745147613,
+        "seed": 4,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.40984852618383766,
+        "seed": 4,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.04325797066047171,
+        "seed": 4,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4312505058687604,
+        "seed": 4,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.39494855349610675,
+        "seed": 4,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2859128273352057,
+        "seed": 5,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4604315040752075,
+        "seed": 5,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4394520165098849,
+        "seed": 5,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6189981060537366,
+        "seed": 5,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4143135012919003,
+        "seed": 5,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.48954250353710593,
+        "seed": 5,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2621722470690143,
+        "seed": 5,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.35091575261923996,
+        "seed": 5,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3475545542932926,
+        "seed": 5,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5182961858078329,
+        "seed": 5,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.24921323211932225,
+        "seed": 5,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3909940260917835,
+        "seed": 5,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.529389174688978,
+        "seed": 6,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.00769171709052517,
+        "seed": 6,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.30800794231871764,
+        "seed": 6,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5005841302148619,
+        "seed": 6,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.535678228455485,
+        "seed": 6,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.00769171709052517,
+        "seed": 6,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.30800794231871764,
+        "seed": 6,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5005841302148619,
+        "seed": 6,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.535678228455485,
+        "seed": 6,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.00769171709052517,
+        "seed": 6,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.30800794231871764,
+        "seed": 6,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5005841302148619,
+        "seed": 6,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5135276630070912,
+        "seed": 7,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5365750319729577,
+        "seed": 7,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4384137101414106,
+        "seed": 7,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5066262934812443,
+        "seed": 7,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5135276630070912,
+        "seed": 7,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5365750319729577,
+        "seed": 7,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4384137101414106,
+        "seed": 7,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5066262934812443,
+        "seed": 7,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.499079326303795,
+        "seed": 7,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5365750319729577,
+        "seed": 7,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4384137101414106,
+        "seed": 7,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5066262934812443,
+        "seed": 7,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5003696874537322,
+        "seed": 8,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.12492125377794716,
+        "seed": 8,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2255247178611954,
+        "seed": 8,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.31298943802076645,
+        "seed": 8,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.37303758436693496,
+        "seed": 8,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.17876932322694983,
+        "seed": 8,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3754127875166413,
+        "seed": 8,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.49830486374561495,
+        "seed": 8,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3715102634514932,
+        "seed": 8,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.07052180369076355,
+        "seed": 8,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5854742919045145,
+        "seed": 8,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6838806876539174,
+        "seed": 8,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4253391463224495,
+        "seed": 9,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3124013872982646,
+        "seed": 9,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5905981166733693,
+        "seed": 9,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.10689244946182948,
+        "seed": 9,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3983755975716071,
+        "seed": 9,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3224180285877345,
+        "seed": 9,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5835775545644744,
+        "seed": 9,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.0898236742945279,
+        "seed": 9,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.300459846970991,
+        "seed": 9,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.452883903042366,
+        "seed": 9,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5707167770508759,
+        "seed": 9,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.41423224608755105,
+        "seed": 9,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.32893000192490657,
+        "seed": 10,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5169834835253,
+        "seed": 10,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.007273591980570455,
+        "seed": 10,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4582123982169629,
+        "seed": 10,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.32893000192490657,
+        "seed": 10,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5169834835253,
+        "seed": 10,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.007273591980570455,
+        "seed": 10,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4582123982169629,
+        "seed": 10,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.32893000192490657,
+        "seed": 10,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5169834835253,
+        "seed": 10,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.007273591980570455,
+        "seed": 10,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4582123982169629,
+        "seed": 10,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.2301333896359513,
+        "seed": 11,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.045243066171349655,
+        "seed": 11,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5796527177485222,
+        "seed": 11,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6651799226918649,
+        "seed": 11,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.2301333896359513,
+        "seed": 11,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.045243066171349655,
+        "seed": 11,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5796527177485222,
+        "seed": 11,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6651799226918649,
+        "seed": 11,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.049911710493332935,
+        "seed": 11,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.14475591500523843,
+        "seed": 11,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5783126666153419,
+        "seed": 11,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.67598853164285,
+        "seed": 11,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.41023129915431666,
+        "seed": 12,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5270899346842217,
+        "seed": 12,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.605767899157234,
+        "seed": 12,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2522919196403549,
+        "seed": 12,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3885556990654762,
+        "seed": 12,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5270899346842217,
+        "seed": 12,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.605767899157234,
+        "seed": 12,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2522919196403549,
+        "seed": 12,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.38829475871502117,
+        "seed": 12,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.520297854994069,
+        "seed": 12,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.605991705015874,
+        "seed": 12,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.2522919196403549,
+        "seed": 12,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.41343599557980604,
+        "seed": 13,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6974841581198109,
+        "seed": 13,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6167491370406347,
+        "seed": 13,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6962085348831749,
+        "seed": 13,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.41343599557980604,
+        "seed": 13,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6974841581198109,
+        "seed": 13,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6167491370406347,
+        "seed": 13,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6962085348831749,
+        "seed": 13,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.41343599557980604,
+        "seed": 13,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6974841581198109,
+        "seed": 13,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6167491370406347,
+        "seed": 13,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6962085348831749,
+        "seed": 13,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5761670683088775,
+        "seed": 14,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.5260733059508463,
+        "seed": 14,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6013824459041522,
+        "seed": 14,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.502441945742896,
+        "seed": 14,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4442160032223638,
+        "seed": 14,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.09505062050391909,
+        "seed": 14,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.7492514498604714,
+        "seed": 14,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.8192011963786777,
+        "seed": 14,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6056788327501463,
+        "seed": 14,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.6039625717530683,
+        "seed": 14,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5905892734807499,
+        "seed": 14,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.610122371528691,
+        "seed": 14,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4190742173976638,
+        "seed": 15,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2269741445401827,
+        "seed": 15,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5402301969983576,
+        "seed": 15,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.5436949873089633,
+        "seed": 15,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4126281651193783,
+        "seed": 15,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2242612801020843,
+        "seed": 15,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.49978521412368904,
+        "seed": 15,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.46402623128502135,
+        "seed": 15,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3942558428798931,
+        "seed": 15,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.20361802212085836,
+        "seed": 15,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4801453812142424,
+        "seed": 15,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.4216889699057906,
+        "seed": 15,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.274757144317253,
+        "seed": 16,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.43429383914310243,
+        "seed": 16,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.7061329083782116,
+        "seed": 16,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.7131614444267673,
+        "seed": 16,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.274757144317253,
+        "seed": 16,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.43429383914310243,
+        "seed": 16,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.7061329083782116,
+        "seed": 16,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.7131614444267673,
+        "seed": 16,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.28626825817314455,
+        "seed": 16,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.43429383914310243,
+        "seed": 16,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.7061329083782116,
+        "seed": 16,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.7131614444267673,
+        "seed": 16,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3214139154532633,
+        "seed": 17,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.48316194311780725,
+        "seed": 17,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3637034213039863,
+        "seed": 17,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4751107502562616,
+        "seed": 17,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3214139154532633,
+        "seed": 17,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.48316194311780725,
+        "seed": 17,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3637034213039863,
+        "seed": 17,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4751107502562616,
+        "seed": 17,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3276376015595553,
+        "seed": 17,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.48316194311780725,
+        "seed": 17,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3637034213039863,
+        "seed": 17,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4751107502562616,
+        "seed": 17,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.3813540861442963,
+        "seed": 18,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.12908303752094444,
+        "seed": 18,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6979470508181812,
+        "seed": 18,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4866941620623461,
+        "seed": 18,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.30754480710628085,
+        "seed": 18,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.12908303752094444,
+        "seed": 18,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6979470508181812,
+        "seed": 18,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4866941620623461,
+        "seed": 18,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.3813540861442963,
+        "seed": 18,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.12908303752094444,
+        "seed": 18,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6979470508181812,
+        "seed": 18,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4866941620623461,
+        "seed": 18,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.17857259069926776,
+        "seed": 19,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.38079509851733107,
+        "seed": 19,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.48520581553742154,
+        "seed": 19,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3942586884391468,
+        "seed": 19,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.17857259069926776,
+        "seed": 19,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.38079509851733107,
+        "seed": 19,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.48520581553742154,
+        "seed": 19,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3942586884391468,
+        "seed": 19,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.17857259069926776,
+        "seed": 19,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.38079509851733107,
+        "seed": 19,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.48520581553742154,
+        "seed": 19,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3942586884391468,
+        "seed": 19,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.28312323746644263,
+        "seed": 20,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.116144193925325,
+        "seed": 20,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.13055783939692472,
+        "seed": 20,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.058970650869939814,
+        "seed": 20,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.22592562329208282,
+        "seed": 20,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.09057524561852423,
+        "seed": 20,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.13800343431876194,
+        "seed": 20,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.019313906278533344,
+        "seed": 20,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.33755200297946625,
+        "seed": 20,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.18494341044451357,
+        "seed": 20,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.227371297488049,
+        "seed": 20,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.03520223415753864,
+        "seed": 20,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6140642913059019,
+        "seed": 21,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.513460687241303,
+        "seed": 21,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.09616034364812588,
+        "seed": 21,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.23509765567908045,
+        "seed": 21,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6074039965706516,
+        "seed": 21,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5128353198583941,
+        "seed": 21,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.09616034364812588,
+        "seed": 21,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.23509765567908045,
+        "seed": 21,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5730481873066612,
+        "seed": 21,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.40128884000372245,
+        "seed": 21,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5493416571832855,
+        "seed": 21,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3149877808143952,
+        "seed": 21,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.30478032700919816,
+        "seed": 22,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2749181440180348,
+        "seed": 22,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.12561540251417064,
+        "seed": 22,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.1819091155335675,
+        "seed": 22,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.37027878366660727,
+        "seed": 22,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4586665228399279,
+        "seed": 22,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.06384266791869642,
+        "seed": 22,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5028064651693371,
+        "seed": 22,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3838755910892138,
+        "seed": 22,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3935128658150895,
+        "seed": 22,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.12164268990306097,
+        "seed": 22,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.37961239730546464,
+        "seed": 22,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4686613651897168,
+        "seed": 23,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.47300377207054317,
+        "seed": 23,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5461152206947014,
+        "seed": 23,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5078448608252619,
+        "seed": 23,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4900385403666443,
+        "seed": 23,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.48377658677767166,
+        "seed": 23,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5107258301621534,
+        "seed": 23,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5273670105060791,
+        "seed": 23,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.24828948425909234,
+        "seed": 23,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5197650429569428,
+        "seed": 23,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.17916580395989262,
+        "seed": 23,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6016275870159089,
+        "seed": 23,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4165605714826908,
+        "seed": 24,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3114606580275903,
+        "seed": 24,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5955634802595872,
+        "seed": 24,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5984301832455525,
+        "seed": 24,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3102116247988624,
+        "seed": 24,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5858505512273399,
+        "seed": 24,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.018933521690929128,
+        "seed": 24,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4497919749008314,
+        "seed": 24,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.04710475292939643,
+        "seed": 24,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.22878091860044564,
+        "seed": 24,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6713805763613124,
+        "seed": 24,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.12012674636955095,
+        "seed": 24,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.502347320638965,
+        "seed": 25,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.40712075666940056,
+        "seed": 25,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.668168556754771,
+        "seed": 25,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.7269505727144558,
+        "seed": 25,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5144317328371385,
+        "seed": 25,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.40824088422326277,
+        "seed": 25,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6757914758955339,
+        "seed": 25,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.7269505727144558,
+        "seed": 25,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.49426234407448955,
+        "seed": 25,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.4150187005860023,
+        "seed": 25,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6545739351144896,
+        "seed": 25,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.7246618737559692,
+        "seed": 25,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5154894709006398,
+        "seed": 26,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.07234616991374296,
+        "seed": 26,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.41766255408135405,
+        "seed": 26,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.6411557435764241,
+        "seed": 26,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.5154894709006398,
+        "seed": 26,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.07234616991374296,
+        "seed": 26,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.41766255408135405,
+        "seed": 26,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.6411557435764241,
+        "seed": 26,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5154894709006398,
+        "seed": 26,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.07234616991374296,
+        "seed": 26,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.41766255408135405,
+        "seed": 26,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.6411557435764241,
+        "seed": 26,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.3335973985485986,
+        "seed": 27,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3755200624239974,
+        "seed": 27,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.016742835805663242,
+        "seed": 27,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3293460113707301,
+        "seed": 27,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.34389445174040306,
+        "seed": 27,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.35818232363471936,
+        "seed": 27,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.016742835805663242,
+        "seed": 27,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.34016989061846015,
+        "seed": 27,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.2440376564679903,
+        "seed": 27,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.27233262116611595,
+        "seed": 27,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.018030025458970086,
+        "seed": 27,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.39641400976353913,
+        "seed": 27,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.2685695162336058,
+        "seed": 28,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.33599733343221444,
+        "seed": 28,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.05141478119679038,
+        "seed": 28,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.45911262134321934,
+        "seed": 28,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.21620169388471533,
+        "seed": 28,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3139137448787597,
+        "seed": 28,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": 0.06384777250409025,
+        "seed": 28,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4460509616990109,
+        "seed": 28,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3705678194669329,
+        "seed": 28,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.35621681088011736,
+        "seed": 28,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.1842480444481805,
+        "seed": 28,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.469767283899868,
+        "seed": 28,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.33107640015399703,
+        "seed": 29,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.46655927759127747,
+        "seed": 29,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.5576091996056828,
+        "seed": 29,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.489607615918661,
+        "seed": 29,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.02562280583249915,
+        "seed": 29,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2287465622395986,
+        "seed": 29,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.32747259044648275,
+        "seed": 29,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2778306169579441,
+        "seed": 29,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.3120264497753124,
+        "seed": 29,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5116968283271808,
+        "seed": 29,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5778872371543867,
+        "seed": 29,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5114977384241436,
+        "seed": 29,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3872460163706721,
+        "seed": 30,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4518859058870063,
+        "seed": 30,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.4354790914681042,
+        "seed": 30,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.21446689690585444,
+        "seed": 30,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3835202505055087,
+        "seed": 30,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4568248712884418,
+        "seed": 30,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4354790914681042,
+        "seed": 30,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.21446689690585444,
+        "seed": 30,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.45866502702300344,
+        "seed": 30,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5188517295812289,
+        "seed": 30,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.48492986255328085,
+        "seed": 30,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5001419531577487,
+        "seed": 30,
+        "tell_scale": 1.5
+      }
+    ]
+  }
+}

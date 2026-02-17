@@ -1,0 +1,155 @@
+{
+  "aggregate": {
+    "avg_line_length_when_found_on_tactical_positions": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0,
+      "n": 3,
+      "std": 0.0
+    },
+    "brier": {
+      "ci95_high": 0.9955131379442529,
+      "ci95_low": 0.8378989243706657,
+      "mean": 0.9167060311574593,
+      "n": 3,
+      "std": 0.06964179232256765
+    },
+    "final_result_distribution": {
+      "counts": {
+        "*": 3
+      },
+      "rates": {
+        "*": 1.0
+      }
+    },
+    "mate_line_found_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "mean": 0.0,
+      "n": 3,
+      "std": 0.0
+    },
+    "mate_line_found_rate_on_tactical_positions": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0,
+      "n": 3,
+      "std": 0.0
+    },
+    "nll": {
+      "ci95_high": 3.454521233816454,
+      "ci95_low": 2.100983988400837,
+      "mean": 2.7777526111086455,
+      "n": 3,
+      "std": 0.5980600201522123
+    },
+    "random_legal_move_baseline_rate_expected": {
+      "top1": 0.0931389980815268,
+      "top3": 0.27941699424458044
+    },
+    "top1_accuracy": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "mean": 0.0,
+      "n": 3,
+      "std": 0.0
+    },
+    "top3_accuracy": {
+      "ci95_high": 0.4263213055223334,
+      "ci95_low": -0.026321305522333277,
+      "mean": 0.20000000000000004,
+      "n": 3,
+      "std": 0.2
+    }
+  },
+  "benchmarks": {
+    "tactical_mate_detection": {
+      "avg_line_length_when_found": 1.0,
+      "mate_line_found_count": 18,
+      "mate_line_found_rate_on_tactical_positions": 1.0,
+      "max_plies": 5,
+      "positions_per_seed": 6,
+      "positions_total": 18
+    }
+  },
+  "config": {
+    "max_demo_plies": 8,
+    "max_mate_plies": 2,
+    "max_train_plies": 10,
+    "profile": "balanced",
+    "run_mode": "in_process_non_verbose_import",
+    "seeds": 3,
+    "train_games": 5
+  },
+  "generated_at_utc": "2026-02-17T22:30:12.637635+00:00",
+  "per_seed": [
+    {
+      "brier": 0.9520197587269175,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 1,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.030183307377085,
+      "seed": 42,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.2
+    },
+    {
+      "brier": 0.8364817259853584,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 2,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 2.094864248188782,
+      "seed": 43,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.4
+    },
+    {
+      "brier": 0.9616166087601021,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 0,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.2082102777600694,
+      "seed": 44,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0
+    }
+  ],
+  "significance": {
+    "top1_vs_random_legal_move": {
+      "baseline_expected_successes": 1.397084971222902,
+      "baseline_rate_expected": 0.0931389980815268,
+      "events": 15,
+      "model_rate": 0.0,
+      "model_successes": 0,
+      "p_value_one_sided": 0.9074982435708044,
+      "z_score_normal_approx": -1.3255056013158786
+    },
+    "top3_vs_random_legal_move": {
+      "baseline_expected_successes": 4.191254913668707,
+      "baseline_rate_expected": 0.27941699424458044,
+      "events": 15,
+      "model_rate": 0.2,
+      "model_successes": 3,
+      "p_value_one_sided": 0.8256629951138246,
+      "z_score_normal_approx": -0.9371643788821953
+    }
+  }
+}

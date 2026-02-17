@@ -1,0 +1,1 @@
+"""Cournot game module."""

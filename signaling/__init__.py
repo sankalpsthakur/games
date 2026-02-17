@@ -1,0 +1,1 @@
+"""Signaling game module."""

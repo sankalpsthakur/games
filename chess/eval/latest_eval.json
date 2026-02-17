@@ -1,0 +1,235 @@
+{
+  "aggregate": {
+    "avg_line_length_when_found_on_tactical_positions": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0,
+      "n": 8,
+      "std": 0.0
+    },
+    "brier": {
+      "ci95_high": 0.9553390562977723,
+      "ci95_low": 0.834834497237709,
+      "mean": 0.8950867767677406,
+      "n": 8,
+      "std": 0.08694856211761799
+    },
+    "final_result_distribution": {
+      "counts": {
+        "*": 8
+      },
+      "rates": {
+        "*": 1.0
+      }
+    },
+    "mate_line_found_rate": {
+      "ci95_high": 0.0,
+      "ci95_low": 0.0,
+      "mean": 0.0,
+      "n": 8,
+      "std": 0.0
+    },
+    "mate_line_found_rate_on_tactical_positions": {
+      "ci95_high": 1.0,
+      "ci95_low": 1.0,
+      "mean": 1.0,
+      "n": 8,
+      "std": 0.0
+    },
+    "nll": {
+      "ci95_high": 3.2180435022295493,
+      "ci95_low": 2.6831075128769477,
+      "mean": 2.9505755075532485,
+      "n": 8,
+      "std": 0.3859763934407748
+    },
+    "random_legal_move_baseline_rate_expected": {
+      "top1": 0.10794943815483486,
+      "top3": 0.2113483144645046
+    },
+    "top1_accuracy": {
+      "ci95_high": 0.20476640682967037,
+      "ci95_low": -0.004766406829670361,
+      "mean": 0.1,
+      "n": 8,
+      "std": 0.1511857892036909
+    },
+    "top3_accuracy": {
+      "ci95_high": 0.3623499180924401,
+      "ci95_low": 0.0876500819075599,
+      "mean": 0.225,
+      "n": 8,
+      "std": 0.19820624179302299
+    }
+  },
+  "benchmarks": {
+    "tactical_mate_detection": {
+      "avg_line_length_when_found": 1.0,
+      "mate_line_found_count": 48,
+      "mate_line_found_rate_on_tactical_positions": 1.0,
+      "max_plies": 5,
+      "positions_per_seed": 6,
+      "positions_total": 48
+    }
+  },
+  "config": {
+    "max_demo_plies": 10,
+    "max_mate_plies": 3,
+    "max_train_plies": 40,
+    "profile": "tactical",
+    "run_mode": "in_process_non_verbose_import",
+    "seeds": 8,
+    "train_games": 20
+  },
+  "generated_at_utc": "2026-02-17T22:33:07.999306+00:00",
+  "per_seed": [
+    {
+      "brier": 0.9809123164210686,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 0,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.4954516044777946,
+      "seed": 60,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0
+    },
+    {
+      "brier": 0.7727193768713738,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 1,
+        "top3_correct": 1,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 2.683426096253889,
+      "seed": 61,
+      "top1_accuracy": 0.2,
+      "top3_accuracy": 0.2
+    },
+    {
+      "brier": 0.9508268681762708,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 1,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.041306518510011,
+      "seed": 62,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.2
+    },
+    {
+      "brier": 0.8357477992580824,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 2,
+        "top3_correct": 2,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 2.3093062218059863,
+      "seed": 63,
+      "top1_accuracy": 0.4,
+      "top3_accuracy": 0.4
+    },
+    {
+      "brier": 0.7758703198640804,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 1,
+        "top3_correct": 1,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 2.7273588057264213,
+      "seed": 64,
+      "top1_accuracy": 0.2,
+      "top3_accuracy": 0.2
+    },
+    {
+      "brier": 0.9191383685526034,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 3,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 2.847755323281088,
+      "seed": 65,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.6
+    },
+    {
+      "brier": 0.9646946289452606,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 1,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.3378058311762784,
+      "seed": 66,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.2
+    },
+    {
+      "brier": 0.9607845360531846,
+      "counts": {
+        "mate_line_found": 0,
+        "opponent_events": 5,
+        "top1_correct": 0,
+        "top3_correct": 0,
+        "white_turns": 5
+      },
+      "final_result": "*",
+      "mate_line_found_rate": 0.0,
+      "nll": 3.1621936591945206,
+      "seed": 67,
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0
+    }
+  ],
+  "significance": {
+    "top1_vs_random_legal_move": {
+      "baseline_expected_successes": 4.317977526193395,
+      "baseline_rate_expected": 0.10794943815483486,
+      "events": 40,
+      "model_rate": 0.1,
+      "model_successes": 4,
+      "p_value_one_sided": 0.5903968325820457,
+      "z_score_normal_approx": -0.2285658948430755
+    },
+    "top3_vs_random_legal_move": {
+      "baseline_expected_successes": 8.453932578580185,
+      "baseline_rate_expected": 0.2113483144645046,
+      "events": 40,
+      "model_rate": 0.225,
+      "model_successes": 9,
+      "p_value_one_sided": 0.3956785964565526,
+      "z_score_normal_approx": 0.26454863625015185
+    }
+  }
+}

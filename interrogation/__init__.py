@@ -1,0 +1,1 @@
+"""Interrogation game module."""

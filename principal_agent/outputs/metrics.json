@@ -1,0 +1,413 @@
+{
+  "config": {
+    "algorithms": [
+      "PPO",
+      "A2C",
+      "DQN"
+    ],
+    "eval_steps": 5,
+    "n_seeds": 1,
+    "seed_start": 1,
+    "seeds": [
+      1
+    ],
+    "sensitivity_eval_steps": 40,
+    "tell_scales": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "train_steps": 5
+  },
+  "game": "principal_agent",
+  "generated_at_utc": "2026-02-17T23:05:43.929280+00:00",
+  "pairwise": {
+    "A2C_minus_DQN": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_diff": 0.0,
+      "n": 1,
+      "p_vs_zero": 1.0,
+      "sd_diff": 0.0,
+      "se_diff": 0.0,
+      "z_vs_zero": 0.0
+    },
+    "PPO_minus_A2C": {
+      "ci95": [
+        1.5720291502755632,
+        1.5720291502755632
+      ],
+      "mean_diff": 1.5720291502755632,
+      "n": 1,
+      "p_vs_zero": 0.0,
+      "sd_diff": 0.0,
+      "se_diff": 0.0,
+      "z_vs_zero": Infinity
+    },
+    "PPO_minus_DQN": {
+      "ci95": [
+        1.5720291502755632,
+        1.5720291502755632
+      ],
+      "mean_diff": 1.5720291502755632,
+      "n": 1,
+      "p_vs_zero": 0.0,
+      "sd_diff": 0.0,
+      "se_diff": 0.0,
+      "z_vs_zero": Infinity
+    }
+  },
+  "per_algorithm": {
+    "A2C": {
+      "ci95": [
+        -0.4219478015127872,
+        -0.4219478015127872
+      ],
+      "mean": -0.4219478015127872,
+      "n": 1,
+      "p_vs_zero": 0.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "z_vs_zero": -Infinity
+    },
+    "DQN": {
+      "ci95": [
+        -0.4219478015127872,
+        -0.4219478015127872
+      ],
+      "mean": -0.4219478015127872,
+      "n": 1,
+      "p_vs_zero": 0.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "z_vs_zero": -Infinity
+    },
+    "PPO": {
+      "ci95": [
+        1.1500813487627761,
+        1.1500813487627761
+      ],
+      "mean": 1.1500813487627761,
+      "n": 1,
+      "p_vs_zero": 0.0,
+      "sd": 0.0,
+      "se": 0.0,
+      "z_vs_zero": Infinity
+    }
+  },
+  "seed_results": [
+    {
+      "algorithm": "PPO",
+      "mean_reward": 1.1500813487627761,
+      "optimal_action_rate": 1.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 1,
+      "total_reward": 5.750406743813881
+    },
+    {
+      "algorithm": "A2C",
+      "mean_reward": -0.4219478015127872,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 1,
+      "total_reward": -2.109739007563936
+    },
+    {
+      "algorithm": "DQN",
+      "mean_reward": -0.4219478015127872,
+      "optimal_action_rate": 0.0,
+      "profile_name": "balanced",
+      "profile_traits": {
+        "aggression": 0.5,
+        "bluff_rate": 0.5,
+        "patience": 0.55,
+        "tightness": 0.5,
+        "tilt_resistance": 0.6
+      },
+      "seed": 1,
+      "total_reward": -2.109739007563936
+    }
+  ],
+  "state_schema": {
+    "base_state_dim": 11,
+    "game_spec": {
+      "base_state_dim": 11,
+      "difficulty": 0.62,
+      "episode_steps": 80,
+      "missed": true,
+      "n_actions": 8,
+      "name": "principal_agent",
+      "profile_weight": 0.34,
+      "reward_noise": 0.16,
+      "step_seconds": 2,
+      "tell_weight": 0.33
+    },
+    "profile_trait_names": [
+      "aggression",
+      "tightness",
+      "bluff_rate",
+      "patience",
+      "tilt_resistance"
+    ],
+    "state_dim": 24,
+    "tell_dim": 8,
+    "tell_interval_seconds": 10
+  },
+  "tell_sensitivity": {
+    "per_algorithm": {
+      "A2C": [
+        {
+          "ci95": [
+            -0.3550268051666743,
+            -0.3550268051666743
+          ],
+          "mean": -0.3550268051666743,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.0,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            -0.1189317191921712,
+            -0.1189317191921712
+          ],
+          "mean": -0.1189317191921712,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.5,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            -0.2752878566092286,
+            -0.2752878566092286
+          ],
+          "mean": -0.2752878566092286,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.0,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            -0.4082800114941049,
+            -0.4082800114941049
+          ],
+          "mean": -0.4082800114941049,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.5,
+          "z_vs_zero": -Infinity
+        }
+      ],
+      "DQN": [
+        {
+          "ci95": [
+            -0.457600016250331,
+            -0.457600016250331
+          ],
+          "mean": -0.457600016250331,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.0,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            0.09741191853684372,
+            0.09741191853684372
+          ],
+          "mean": 0.09741191853684372,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.5,
+          "z_vs_zero": Infinity
+        },
+        {
+          "ci95": [
+            0.05904343027938939,
+            0.05904343027938939
+          ],
+          "mean": 0.05904343027938939,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.0,
+          "z_vs_zero": Infinity
+        },
+        {
+          "ci95": [
+            -0.5982837589217905,
+            -0.5982837589217905
+          ],
+          "mean": -0.5982837589217905,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.5,
+          "z_vs_zero": -Infinity
+        }
+      ],
+      "PPO": [
+        {
+          "ci95": [
+            -0.35612179913871544,
+            -0.35612179913871544
+          ],
+          "mean": -0.35612179913871544,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.0,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            -0.3486134498225742,
+            -0.3486134498225742
+          ],
+          "mean": -0.3486134498225742,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 0.5,
+          "z_vs_zero": -Infinity
+        },
+        {
+          "ci95": [
+            0.1391337913374732,
+            0.1391337913374732
+          ],
+          "mean": 0.1391337913374732,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.0,
+          "z_vs_zero": Infinity
+        },
+        {
+          "ci95": [
+            -0.42746895439585436,
+            -0.42746895439585436
+          ],
+          "mean": -0.42746895439585436,
+          "n": 1,
+          "p_vs_zero": 0.0,
+          "sd": 0.0,
+          "se": 0.0,
+          "tell_scale": 1.5,
+          "z_vs_zero": -Infinity
+        }
+      ]
+    },
+    "raw": [
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.35612179913871544,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.3486134498225742,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": 0.1391337913374732,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "PPO",
+        "mean_reward": -0.42746895439585436,
+        "seed": 1,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.3550268051666743,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.1189317191921712,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.2752878566092286,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "A2C",
+        "mean_reward": -0.4082800114941049,
+        "seed": 1,
+        "tell_scale": 1.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.457600016250331,
+        "seed": 1,
+        "tell_scale": 0.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.09741191853684372,
+        "seed": 1,
+        "tell_scale": 0.5
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": 0.05904343027938939,
+        "seed": 1,
+        "tell_scale": 1.0
+      },
+      {
+        "algorithm": "DQN",
+        "mean_reward": -0.5982837589217905,
+        "seed": 1,
+        "tell_scale": 1.5
+      }
+    ]
+  }
+}

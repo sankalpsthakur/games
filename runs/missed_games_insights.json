@@ -1,0 +1,243 @@
+{
+  "aggregate": {
+    "all_negative_games": [
+      "auctions",
+      "beer_distribution",
+      "bertrand",
+      "cournot",
+      "crisis_negotiations",
+      "interrogation",
+      "market_for_lemons",
+      "principal_agent",
+      "public_goods",
+      "signaling",
+      "tenders",
+      "trust_game",
+      "ultimatum"
+    ],
+    "all_positive_games": [
+      "hawk_dove",
+      "iterated_prisoners_dilemma",
+      "stag_hunt"
+    ],
+    "strongest_tell_sensitivity_delta": {
+      "algorithm": "A2C",
+      "delta_1_5_minus_0_0": -0.21883191986108014,
+      "game": "ultimatum",
+      "mean_at_0_0": -0.4038945555990802,
+      "mean_at_1_5": -0.6227264754601604
+    },
+    "win_counts": {
+      "A2C": 6,
+      "DQN": 5,
+      "PPO": 5
+    }
+  },
+  "games": [
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "PPO",
+      "best_ci95": [
+        -0.44080072470903037,
+        -0.2314016151102693
+      ],
+      "best_mean_reward": -0.33610116990964983,
+      "best_p_vs_zero": 3.1361957475439795e-10,
+      "game": "auctions",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "DQN",
+      "best_ci95": [
+        -0.3538938473441536,
+        -0.12012059771561216
+      ],
+      "best_mean_reward": -0.23700722252988288,
+      "best_p_vs_zero": 7.060775142408993e-05,
+      "game": "beer_distribution",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "PPO",
+      "best_ci95": [
+        -0.47964975352774,
+        -0.2644037719106417
+      ],
+      "best_mean_reward": -0.37202676271919083,
+      "best_p_vs_zero": 1.2419398842666851e-11,
+      "game": "bertrand",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        -0.44833088788057096,
+        -0.23869792589231617
+      ],
+      "best_mean_reward": -0.3435144068864436,
+      "best_p_vs_zero": 1.3317968949877468e-10,
+      "game": "cournot",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        -0.342338475548266,
+        -0.07291006587868035
+      ],
+      "best_mean_reward": -0.2076242707134732,
+      "best_p_vs_zero": 0.002521146182892231,
+      "game": "crisis_negotiations",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        0.16097120247159674,
+        0.4920793944290664
+      ],
+      "best_mean_reward": 0.32652529845033157,
+      "best_p_vs_zero": 0.00011075152255513032,
+      "game": "hawk_dove",
+      "significant_pairwise": {
+        "PPO_minus_A2C": {
+          "ci95": [
+            -0.0799241983329866,
+            -0.020364423473828025
+          ],
+          "mean_diff": -0.05014431090340731,
+          "n": 30,
+          "p_vs_zero": 0.0009657820992221566,
+          "sd_diff": 0.0832199801282914,
+          "se_diff": 0.01519382011713229,
+          "z_vs_zero": -3.300309633576973
+        }
+      }
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        -0.4623532690733123,
+        -0.2358148810389511
+      ],
+      "best_mean_reward": -0.3490840750561317,
+      "best_p_vs_zero": 1.5361871774643987e-09,
+      "game": "interrogation",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "PPO",
+      "best_ci95": [
+        0.2618122861194767,
+        0.6220692452724549
+      ],
+      "best_mean_reward": 0.4419407656959658,
+      "best_p_vs_zero": 1.51830306238665e-06,
+      "game": "iterated_prisoners_dilemma",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "DQN",
+      "best_ci95": [
+        -0.3871197767351501,
+        -0.1421474912940233
+      ],
+      "best_mean_reward": -0.26463363401458667,
+      "best_p_vs_zero": 2.2894139389162405e-05,
+      "game": "market_for_lemons",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "PPO",
+      "best_ci95": [
+        -0.3511571231635936,
+        -0.12688792641908636
+      ],
+      "best_mean_reward": -0.23902252479133998,
+      "best_p_vs_zero": 2.942474328215816e-05,
+      "game": "principal_agent",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "PPO",
+      "best_ci95": [
+        -0.5070212639007287,
+        -0.2545118427823918
+      ],
+      "best_mean_reward": -0.38076655334156023,
+      "best_p_vs_zero": 3.3985965153249253e-09,
+      "game": "public_goods",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "DQN",
+      "best_ci95": [
+        -0.2836162583757109,
+        -0.0386762396228236
+      ],
+      "best_mean_reward": -0.16114624899926727,
+      "best_p_vs_zero": 0.00990949988363532,
+      "game": "signaling",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "DQN",
+      "best_ci95": [
+        0.20025873907906558,
+        0.4651929899374727
+      ],
+      "best_mean_reward": 0.33272586450826913,
+      "best_p_vs_zero": 8.520431424852148e-07,
+      "game": "stag_hunt",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "DQN",
+      "best_ci95": [
+        -0.41768975305894374,
+        -0.2861920342923394
+      ],
+      "best_mean_reward": -0.3519408936756416,
+      "best_p_vs_zero": 0.0,
+      "game": "tenders",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        -0.43627439807591717,
+        -0.19728082062447472
+      ],
+      "best_mean_reward": -0.31677760935019594,
+      "best_p_vs_zero": 2.0381656362644662e-07,
+      "game": "trust_game",
+      "significant_pairwise": {}
+    },
+    {
+      "all_algorithms_significant_vs_zero": true,
+      "best_algorithm": "A2C",
+      "best_ci95": [
+        -0.47265565375195817,
+        -0.23738548468122647
+      ],
+      "best_mean_reward": -0.3550205692165923,
+      "best_p_vs_zero": 3.313824548101252e-09,
+      "game": "ultimatum",
+      "significant_pairwise": {}
+    }
+  ]
+}

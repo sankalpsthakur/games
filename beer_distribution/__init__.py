@@ -1,0 +1,1 @@
+"""Beer Distribution game module."""
