@@ -14,3 +14,15 @@
 ## Outputs
 - Default output location: `market_for_lemons/outputs/`
 - Override with: `--output-dir /absolute/path`
+
+## Results (Multi-Method Framework)
+
+30 seeds, 280 train steps, 140 eval steps.
+
+| Algorithm | Mean | SD | SE | 95% CI | p vs zero |
+|---|---:|---:|---:|---|---:|
+| PPO | -0.2931 | 0.3540 | 0.0646 | [-0.4198, -0.1664] | 5.75e-06 |
+| A2C | -0.2886 | 0.3231 | 0.0590 | [-0.4042, -0.1730] | 1.00e-06 |
+| **DQN** | **-0.2581** | 0.3395 | 0.0620 | [-0.3796, -0.1366] | 3.13e-05 |
+
+Best algorithm: **DQN** (mean -0.2581). All algorithms negative. Pairwise differences not significant.

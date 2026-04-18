@@ -1,0 +1,217 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Establish simulation experiment ledger and baseline controls",
+        "description": "Create a reproducible run-manifest and experiment-control foundation for all future 18-game studies, including explicit schema versioning and seed bookkeeping.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [],
+        "details": "Implement a shared artifact contract: manifest fields for repo commit, run_schema_version, game_id, method, baseline_family, opponent_profile, seed, hyperparameters, hardware/runtime metadata, and data quality flags. Add helpers to validate/write manifests so every run emits immutable JSONL artifacts. Stand up a baseline matrix scaffold and a single config entrypoint for smoke vs full-seed runs.",
+        "testStrategy": "Run a dummy job and assert one manifest file exists per run with validated schema; verify seed list uniqueness and deterministic output filenames across reruns."
+      },
+      {
+        "id": 2,
+        "title": "Replace synthetic oracle reward with explicit payoff logic",
+        "description": "Refactor `shared/eval_harness.py` and related flow to compute game outcomes from explicit game-state payoffs instead of oracle-style shortcuts.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "details": "Define explicit per-game reward handlers using terminal state, move legality, and public-payoff semantics. Add a shared payoff contract so each game can inject utility, regret signals, and terminal diagnostics. Keep backward compatibility by retaining a compatibility shim behind a deprecated config flag.",
+        "testStrategy": "Create deterministic fixtures for at least three representative games and assert rewards match manually computed payoff tables for fixed transcripts. Include failing oracle-path regression tests that confirm reward deltas are non-zero in relevant games."
+      },
+      {
+        "id": 3,
+        "title": "Introduce explicit opponent API and adaptive policy strategies",
+        "description": "Add `shared/opponents.py` with self-play, adaptive, and static opponent profiles, then integrate it into environment execution paths.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2
+        ],
+        "details": "Create a typed opponent interface with methods for profile update, belief update, mixed-policy sampling, and horizon-aware adaptation. Add baseline profiles: random, minimax-lite, exploitative best-response, and curriculum self-play. Add hooks for per-step opponent state persistence and deterministic seeding.",
+        "testStrategy": "Simulate one small game with fixed seeds and assert opponent trajectories are reproducible and policy switches follow profile schedule files. Add contract tests for deterministic and adaptive branches."
+      },
+      {
+        "id": 4,
+        "title": "Add baseline suite module and control variants",
+        "description": "Create `shared/baselines.py` with random, oracle, greedy/no-learning, tell-disabled, and profile-disabled controls plus ablation toggles.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "details": "Implement baseline classes with a unified policy interface used by training and evaluation loops. Add switch matrix support so each game run can compare learned agent against all baselines under identical seeds and budgets.",
+        "testStrategy": "Smoke test that each baseline returns valid action vectors and consumes identical feature shapes as the learner policies for at least two games. Verify toggles correctly disable tell messages, profile drift, and adaptation."
+      },
+      {
+        "id": 5,
+        "title": "Extend game metadata and class tags for tuning strategy",
+        "description": "Update `shared/game_specs.py` with reward mode, game class labels, equilibrium targets, and opponent defaults used by downstream schedulers.",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "details": "Add fields for action space type, equilibrium hypothesis, strategic class (`binary`, `low_entropy`, `multi_action`, `adversarial`), and terminal diagnostics hooks. Export utility methods mapping game to recommended learning method, LR schedule, and rollout depth.",
+        "testStrategy": "Add unit tests that every registered game has a valid class tag and that every runner query of game class produces deterministic, typed config values."
+      },
+      {
+        "id": 6,
+        "title": "Upgrade PPO implementation for multi-classified games",
+        "description": "Enhance PPO in `shared/methods.py` with rollout buffer semantics, multi-epoch updates, KL/value clipping diagnostics, and stable advantage normalization.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          3,
+          5
+        ],
+        "details": "Refactor PPO into explicit buffer collection + update stages. Add GAE options, clipping safeguards, entropy logging, and guardrails for batch/trajectory length mismatches. Include support for variable action cardinalities from game specs.",
+        "testStrategy": "Train PPO for a short horizon on a toy game and assert loss curves are bounded, entropy stays finite, and update step changes policy only when advantage estimates are computable."
+      },
+      {
+        "id": 7,
+        "title": "Upgrade A2C implementation with stability controls",
+        "description": "Harden A2C in `shared/methods.py` with entropy bonus, value clipping, reward normalization, and rollout sanity checks.",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          5
+        ],
+        "details": "Add entropy regularization, orthogonalized advantage normalization, and clipped value loss. Add runtime assertions for NaN/inf checks and gradient-norm reporting so training collapses are diagnosed quickly.",
+        "testStrategy": "Run short training pass and validate no NaN in actor/critic outputs, entropy term contributes to loss, and episode return metrics remain finite over 500 steps."
+      },
+      {
+        "id": 8,
+        "title": "Upgrade DQN for robust discrete-action studies",
+        "description": "Enhance `shared/methods.py` DQN path with replay memory, target network sync, and optional Double/Dueling variants.",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          5
+        ],
+        "details": "Introduce prioritized/uniform replay abstraction, periodic target update schedule, epsilon annealing with lower bounds, and optional Double/Dueling heads. Add action-availability masking for invalid moves from game specs.",
+        "testStrategy": "Run scripted batch over known transitions and assert target network lag is respected, replay samples shape-correct, and epsilon schedule decays monotonically."
+      },
+      {
+        "id": 9,
+        "title": "Add architecture-aware per-game training budgets and method-routing",
+        "description": "Wire game class tags into `shared/train_multi_method.py` and runner plumbing so method/hyperparameters are chosen per game and per evaluation block.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "details": "Build a declarative routing table that maps game class and sample regime to method family, learning-rate envelope, episode budget, entropy floor, and replay/rollout depth. Add CLI-level overrides with safe validation and run manifest capture.",
+        "testStrategy": "Run a matrix config through the trainer and assert each of 4 sample game classes gets its intended method/hyperparameter set and produces per-game budgets in manifests."
+      },
+      {
+        "id": 10,
+        "title": "Integrate opponent dynamics into training and eval loops",
+        "description": "Modify runners so adaptive opponent profiles and self-play populations are first-class citizens in each episode and ablation scenario.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          3,
+          9
+        ],
+        "details": "Add lifecycle hooks for opponent initialization, profile drift, and stability gates. Persist opponent states to run manifests. Ensure tell/profile disabling options map cleanly to corresponding behavior without contaminating control studies.",
+        "testStrategy": "Compare two runs with identical seeds but different opponent schedules and verify episode transcripts diverge only where expected. Add regression test for disabling profile adaptation in baseline conditions."
+      },
+      {
+        "id": 11,
+        "title": "Add game-theoretic metrics: regret, exploitability, and welfare",
+        "description": "Create `shared/metrics.py` and expose regret/exploitability, welfare/fairness, and convergence-rate indicators for all reportable runs.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          2,
+          10
+        ],
+        "details": "Compute per-episode and aggregate metrics across methods, including best-response regret gaps, empirical exploitability proxies, social welfare, and fairness dispersion. Include confidence-ready variance estimates and seed-level diagnostics.",
+        "testStrategy": "Introduce controlled synthetic payoffs and verify each metric matches closed-form expectations for at least one cooperative and one competitive toy scenario."
+      },
+      {
+        "id": 12,
+        "title": "Build statistical protocol for paired, multi-comparison reporting",
+        "description": "Implement paired-seed comparisons, effect-size summaries, and multiple-testing corrections across method/game cells.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          10,
+          11
+        ],
+        "details": "Add utilities for paired t/Wilcoxon where applicable, bootstrap CIs, and FDR/Bonferroni pathways. Ensure all outputs include sample count, seed pairing id, and adjusted p-values where declared.",
+        "testStrategy": "Unit-test on synthetic Gaussian returns with known significance outcomes. Verify corrected p-values and effect sizes match known library values."
+      },
+      {
+        "id": 13,
+        "title": "Enhance reporting and visualization with gap-ledger sections",
+        "description": "Update `shared/visualize.py` and report writers to emit full 18-game comparisons, confidence intervals, and explicit gap statements for low-confidence findings.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          11,
+          12
+        ],
+        "details": "Add report sections for baseline parity checks, method ranking heatmaps, gap ledger entries per game (what insight is missing, what failed to converge), and confidence labeling for each conclusion. Surface invalid/missing-data warnings in output artifacts.",
+        "testStrategy": "Generate a sample report and assert schema fields exist for all 18 games, include baseline diffs, CI spans, and a machine-readable gap ledger section in JSON/markdown."
+      },
+      {
+        "id": 14,
+        "title": "Execute full 18-game smoke sweep with ablations",
+        "description": "Run baseline + all algorithm suites over the full game portfolio with lower seeds, collecting reproducible diagnostics before full-scale final runs.",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": [
+          9,
+          10,
+          11,
+          13
+        ],
+        "details": "Automate matrix generation for ablations (oracle/no-oracle baseline, tell disabled, profile disabled, opponent static/adaptive), produce aggregated manifests, and check pipeline completes end-to-end across 18 games.",
+        "testStrategy": "Execute pipeline with smoke seed budget and assert all 18 games emit manifest, metrics, and visualization files; fail pipeline if any game missing paired baseline metrics or has invalid metadata."
+      },
+      {
+        "id": 15,
+        "title": "Run final high-seed experiment protocol and significance checks",
+        "description": "Run large-seed final campaigns for all 18 games and compute final paired significance with multiple-testing controls.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          12,
+          14
+        ],
+        "details": "Increase seed counts, lock method/game routing, and execute reruns with manifest hash consistency checks. Produce final tables of strategy performance deltas, confidence intervals, and statistically flagged findings.",
+        "testStrategy": "Perform full rerun on a representative subset first; then on full roster confirm reproducibility at run-seed level and that significance output is complete for each game-method pair."
+      },
+      {
+        "id": 16,
+        "title": "Publish final insights dossier and engineering handoff",
+        "description": "Compile final gap analysis, insight map, and execution gaps into a single hardening package for developers and analysts.",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [
+          1,
+          15
+        ],
+        "details": "Assemble a strategic report with game-by-game insights, remaining blind spots, exploitability/regret interpretation, and concrete follow-up experiments. Add checklists for invalid data, missing seeds, and interpretive confidence labels before declaring final claims.",
+        "testStrategy": "Review report completeness against checklists and run a dry-run for downstream users: replay one full game report from artifacts and confirm conclusions can be traced back to metric + manifest entries."
+      }
+    ],
+    "metadata": {
+      "created": "2026-02-20T00:00:00Z",
+      "updated": "2026-02-20T00:00:00Z",
+      "description": "Tasks for game simulation modernization and 18-game evaluation remediation"
+    }
+  }
+}

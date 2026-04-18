@@ -5,7 +5,7 @@
       "A2C",
       "DQN"
     ],
-    "eval_steps": 250,
+    "eval_steps": 140,
     "games": [
       "auctions",
       "beer_distribution",
@@ -22,9 +22,11 @@
       "stag_hunt",
       "tenders",
       "trust_game",
-      "ultimatum"
+      "ultimatum",
+      "poker",
+      "chess"
     ],
-    "jobs": 6,
+    "jobs": 3,
     "output_root": "/Users/sankalp/Projects/experiment/games/runs",
     "seed_start": 1,
     "seeds": 30,
@@ -34,14 +36,14 @@
       1.0,
       1.5
     ],
-    "train_steps": 350
+    "train_steps": 280
   },
-  "elapsed_seconds": 35.384696583030745,
+  "elapsed_seconds": 32.33629187499173,
   "failures": [],
   "games": [
     {
       "best_algorithm": "PPO",
-      "best_mean_reward": -0.33610116990964983,
+      "best_mean_reward": -0.33703672536671025,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -53,9 +55,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -64,7 +66,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.891173249925487,
+      "elapsed_seconds": 5.684474333189428,
       "game": "auctions",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/auctions/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/auctions/metrics.json",
@@ -73,7 +75,7 @@
     },
     {
       "best_algorithm": "DQN",
-      "best_mean_reward": -0.23700722252988288,
+      "best_mean_reward": -0.22418444422342204,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -85,9 +87,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -96,7 +98,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 13.105028999969363,
+      "elapsed_seconds": 5.714401166886091,
       "game": "beer_distribution",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/beer_distribution/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/beer_distribution/metrics.json",
@@ -104,8 +106,8 @@
       "status": "ok"
     },
     {
-      "best_algorithm": "PPO",
-      "best_mean_reward": -0.37202676271919083,
+      "best_algorithm": "DQN",
+      "best_mean_reward": -0.3740782473544739,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -117,9 +119,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -128,7 +130,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 13.001985500101,
+      "elapsed_seconds": 5.710877459030598,
       "game": "bertrand",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/bertrand/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/bertrand/metrics.json",
@@ -136,8 +138,40 @@
       "status": "ok"
     },
     {
+      "best_algorithm": "DQN",
+      "best_mean_reward": -0.31230444565560184,
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "shared.train_multi_method",
+        "--game",
+        "chess",
+        "--seeds",
+        "30",
+        "--seed-start",
+        "1",
+        "--train-steps",
+        "280",
+        "--eval-steps",
+        "140",
+        "--algorithms",
+        "PPO,A2C,DQN",
+        "--tell-scales",
+        "0.0,0.5,1.0,1.5",
+        "--output-root",
+        "/Users/sankalp/Projects/experiment/games/runs",
+        "--quiet"
+      ],
+      "elapsed_seconds": 6.322859749896452,
+      "game": "chess",
+      "log_path": "/Users/sankalp/Projects/experiment/games/runs/chess/orchestrator_subprocess.log",
+      "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/chess/metrics.json",
+      "returncode": 0,
+      "status": "ok"
+    },
+    {
       "best_algorithm": "A2C",
-      "best_mean_reward": -0.3435144068864436,
+      "best_mean_reward": -0.34008563553886173,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -149,9 +183,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -160,7 +194,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.720785457990132,
+      "elapsed_seconds": 5.151586916996166,
       "game": "cournot",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/cournot/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/cournot/metrics.json",
@@ -169,7 +203,7 @@
     },
     {
       "best_algorithm": "A2C",
-      "best_mean_reward": -0.2076242707134732,
+      "best_mean_reward": -0.19766312918687048,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -181,9 +215,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -192,7 +226,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.953867915901355,
+      "elapsed_seconds": 5.163978291908279,
       "game": "crisis_negotiations",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/crisis_negotiations/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/crisis_negotiations/metrics.json",
@@ -200,8 +234,8 @@
       "status": "ok"
     },
     {
-      "best_algorithm": "A2C",
-      "best_mean_reward": 0.32652529845033157,
+      "best_algorithm": "DQN",
+      "best_mean_reward": 0.315629179872861,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -213,9 +247,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -224,7 +258,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.837476750020869,
+      "elapsed_seconds": 5.1208854170981795,
       "game": "hawk_dove",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/hawk_dove/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/hawk_dove/metrics.json",
@@ -232,8 +266,8 @@
       "status": "ok"
     },
     {
-      "best_algorithm": "A2C",
-      "best_mean_reward": -0.3490840750561317,
+      "best_algorithm": "DQN",
+      "best_mean_reward": -0.3478338983819273,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -245,9 +279,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -256,7 +290,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.701632707961835,
+      "elapsed_seconds": 5.035835749935359,
       "game": "interrogation",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/interrogation/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/interrogation/metrics.json",
@@ -265,7 +299,7 @@
     },
     {
       "best_algorithm": "PPO",
-      "best_mean_reward": 0.4419407656959658,
+      "best_mean_reward": 0.453961229572516,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -277,9 +311,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -288,7 +322,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.53774604096543,
+      "elapsed_seconds": 5.033904833951965,
       "game": "iterated_prisoners_dilemma",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/iterated_prisoners_dilemma/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/iterated_prisoners_dilemma/metrics.json",
@@ -297,7 +331,7 @@
     },
     {
       "best_algorithm": "DQN",
-      "best_mean_reward": -0.26463363401458667,
+      "best_mean_reward": -0.25812415785725107,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -309,9 +343,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -320,7 +354,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.45419379195664,
+      "elapsed_seconds": 5.037014874862507,
       "game": "market_for_lemons",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/market_for_lemons/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/market_for_lemons/metrics.json",
@@ -328,8 +362,40 @@
       "status": "ok"
     },
     {
-      "best_algorithm": "PPO",
-      "best_mean_reward": -0.23902252479133998,
+      "best_algorithm": "A2C",
+      "best_mean_reward": -0.282025556137035,
+      "command": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "shared.train_multi_method",
+        "--game",
+        "poker",
+        "--seeds",
+        "30",
+        "--seed-start",
+        "1",
+        "--train-steps",
+        "280",
+        "--eval-steps",
+        "140",
+        "--algorithms",
+        "PPO,A2C,DQN",
+        "--tell-scales",
+        "0.0,0.5,1.0,1.5",
+        "--output-root",
+        "/Users/sankalp/Projects/experiment/games/runs",
+        "--quiet"
+      ],
+      "elapsed_seconds": 6.259329583030194,
+      "game": "poker",
+      "log_path": "/Users/sankalp/Projects/experiment/games/runs/poker/orchestrator_subprocess.log",
+      "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/poker/metrics.json",
+      "returncode": 0,
+      "status": "ok"
+    },
+    {
+      "best_algorithm": "DQN",
+      "best_mean_reward": -0.24863595104459374,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -341,9 +407,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -352,7 +418,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.45527354197111,
+      "elapsed_seconds": 5.042760667158291,
       "game": "principal_agent",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/principal_agent/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/principal_agent/metrics.json",
@@ -361,7 +427,7 @@
     },
     {
       "best_algorithm": "PPO",
-      "best_mean_reward": -0.38076655334156023,
+      "best_mean_reward": -0.3818720879312171,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -373,9 +439,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -384,7 +450,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.722158582997508,
+      "elapsed_seconds": 5.042900333181024,
       "game": "public_goods",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/public_goods/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/public_goods/metrics.json",
@@ -393,7 +459,7 @@
     },
     {
       "best_algorithm": "DQN",
-      "best_mean_reward": -0.16114624899926727,
+      "best_mean_reward": -0.15075225341219264,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -405,9 +471,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -416,7 +482,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 12.583469165954739,
+      "elapsed_seconds": 5.057994000148028,
       "game": "signaling",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/signaling/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/signaling/metrics.json",
@@ -424,8 +490,8 @@
       "status": "ok"
     },
     {
-      "best_algorithm": "DQN",
-      "best_mean_reward": 0.33272586450826913,
+      "best_algorithm": "PPO",
+      "best_mean_reward": 0.29585743780561985,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -437,9 +503,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -448,7 +514,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 10.002002082997933,
+      "elapsed_seconds": 5.087084332946688,
       "game": "stag_hunt",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/stag_hunt/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/stag_hunt/metrics.json",
@@ -457,7 +523,7 @@
     },
     {
       "best_algorithm": "DQN",
-      "best_mean_reward": -0.3519408936756416,
+      "best_mean_reward": -0.3586124969412142,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -469,9 +535,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -480,7 +546,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 9.937245083972812,
+      "elapsed_seconds": 5.009622083045542,
       "game": "tenders",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/tenders/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/tenders/metrics.json",
@@ -489,7 +555,7 @@
     },
     {
       "best_algorithm": "A2C",
-      "best_mean_reward": -0.31677760935019594,
+      "best_mean_reward": -0.3141170050760742,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -501,9 +567,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -512,7 +578,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 9.794791541993618,
+      "elapsed_seconds": 5.025871125049889,
       "game": "trust_game",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/trust_game/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/trust_game/metrics.json",
@@ -521,7 +587,7 @@
     },
     {
       "best_algorithm": "A2C",
-      "best_mean_reward": -0.3550205692165923,
+      "best_mean_reward": -0.35145229878535583,
       "command": [
         "/opt/homebrew/opt/python@3.14/bin/python3.14",
         "-m",
@@ -533,9 +599,9 @@
         "--seed-start",
         "1",
         "--train-steps",
-        "350",
+        "280",
         "--eval-steps",
-        "250",
+        "140",
         "--algorithms",
         "PPO,A2C,DQN",
         "--tell-scales",
@@ -544,7 +610,7 @@
         "/Users/sankalp/Projects/experiment/games/runs",
         "--quiet"
       ],
-      "elapsed_seconds": 9.953811542014591,
+      "elapsed_seconds": 6.153660665964708,
       "game": "ultimatum",
       "log_path": "/Users/sankalp/Projects/experiment/games/runs/ultimatum/orchestrator_subprocess.log",
       "metrics_path": "/Users/sankalp/Projects/experiment/games/runs/ultimatum/metrics.json",
@@ -552,5 +618,5 @@
       "status": "ok"
     }
   ],
-  "generated_at_utc": "2026-02-17T23:03:17.957577+00:00"
+  "generated_at_utc": "2026-02-20T12:46:32.673121+00:00"
 }

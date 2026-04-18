@@ -1,0 +1,63 @@
+# Overview
+Modernize the game simulation framework so results reflect real game-theoretic learning and strategic behavior, not just oracle-style classification.
+
+# Core Features
+- Replace synthetic reward oracle with game-specific payoff logic for each game spec.
+- Introduce explicit multi-agent dynamics (adaptive opponent policies, self-play populations, and opponent profile variation within episodes).
+- Add baseline suite: random, oracle, greedy/no-learning, tell-disabled, profile-disabled, and full-ablation controls.
+- Upgrade learning stack: stronger PPO/A2C/DQN implementations with replay, targets, entropy bonus, and stable rollout semantics.
+- Add game-class aware training: binary-action, low-entropy, multi-action, and adversarial profiles with tuned hyperparameters.
+- Expand metrics to include game-theoretic outcomes (regret, exploitability, equilibrium distance, welfare/fairness metrics where relevant).
+- Introduce rigorous statistical protocol: larger seed counts for final runs, paired comparisons, and multiple-testing corrections.
+- Persist all run metadata and assumptions to produce reproducible, auditable artifacts.
+
+# User Experience
+- Run command should produce a complete 18-game report with confidence intervals, baseline comparisons, algorithm and environment ablations, and gap statements.
+- Developers can inspect why each run is valid or where inference should be considered low-confidence.
+- A single `task_master` backlog should track implementation + experiment tasks with clear dependencies.
+
+# Technical Architecture
+- Update `shared/eval_harness.py` to support game-specific environment objects, opponent agents, and reward handlers.
+- Update `shared/methods.py` to include:
+  - PPO with rollout buffer and multiple epochs per update,
+  - A2C with entropy bonus and better value clipping,
+  - DQN with target network + replay + Double/Dueling option.
+- Update `shared/game_specs.py` to include reward mode, game class tags, equilibrium target fields, and opponent config defaults.
+- Add new modules:
+  - `shared/opponents.py` (adaptive opponent strategies and self-play policies),
+  - `shared/baselines.py` (random/oracle/profile-free controls),
+  - `shared/metrics.py` (regret/exploitability/welfare/fairness/learning-curve).
+- Expand `shared/train_multi_method.py`/runner plumbing for configurable budgets per game and per-run reporting.
+- Update `shared/visualize.py` and report writers to include gap-aware sections.
+- Add task and experiment manifests: config hash, git hash, random seed and hyperparameters per run.
+
+# Development Roadmap
+## Phase 1 (Foundation)
+1. Baseline infrastructure: baseline suite, reproducible run manifests, and opponent API.
+2. Replace reward generation with explicit game-payoff path and per-game terminal logic.
+
+## Phase 2 (Learning Stack)
+3. Upgrade PPO/A2C/DQN implementations.
+4. Add architecture variants and game-class parameter sets.
+5. Add opponent dynamics and adaptive adaptation loop.
+
+## Phase 3 (Evaluation)
+6. Add game-theoretic metrics (exploitability, regret, welfare, fairness).
+7. Add significance and multiple-comparison protocol; increase seeds for final protocol.
+8. Run full 18-game experiment with all baselines.
+
+## Phase 4 (Hardening)
+9. Fill remaining report gaps with a gap ledger and publish final recommendations.
+10. Add checks and docs for invalid/missing data conditions.
+
+# Logical Dependency Chain
+- Phase 1 foundations before algorithm upgrades.
+- Upgraded algorithms before full comparison studies.
+- Evaluation/metrics only after stable multi-agent environment and baselines are in place.
+- Hardening/reporting after final rerun.
+
+# Risks and Mitigations
+- Reward rewrite invalidating old runs: mitigate by versioning `run_schema_version` and keeping old comparison path.
+- Compute cost: mitigate via staged experiments and smaller seeds for smoke, larger seeds for final runs only.
+- Multi-agent instability: mitigate with fixed-seed deterministic opponents and curriculum checks before full adaptation.
+- Statistical overfit: mitigate with paired seeds, holdout reporting, and effect-size-first interpretation.

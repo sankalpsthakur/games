@@ -49,6 +49,40 @@ Outputs:
 - `runs/summary_report.md`
 - per-game `runs/<game>/...`
 
+## Generate PDF Report
+```bash
+python -m shared.generate_report_pdf --output-root runs
+```
+
+Produces a single PDF concatenating all per-game plots, the summary table, and the gap analysis.
+
+## Results (All 18 Games)
+
+Configuration: 30 seeds, 280 train steps, 140 eval steps, PPO + A2C + DQN, tell scales 0.0 / 0.5 / 1.0 / 1.5
+
+| Game | Best Algo | Mean Reward | p-value |
+|---|---|---:|---:|
+| iterated_prisoners_dilemma | PPO | +0.4540 | 1.32e-06 |
+| hawk_dove | DQN | +0.3156 | 3.51e-05 |
+| stag_hunt | PPO | +0.2959 | 1.33e-03 |
+| signaling | DQN | -0.1508 | 1.65e-02 |
+| crisis_negotiations | A2C | -0.1977 | 5.37e-03 |
+| beer_distribution | DQN | -0.2242 | 7.58e-04 |
+| principal_agent | DQN | -0.2486 | 1.38e-05 |
+| market_for_lemons | DQN | -0.2581 | 3.13e-05 |
+| poker | A2C | -0.2820 | 1.13e-05 |
+| chess | DQN | -0.3123 | 2.28e-13 |
+| trust_game | A2C | -0.3141 | 2.33e-07 |
+| auctions | PPO | -0.3370 | 5.70e-10 |
+| cournot | A2C | -0.3401 | 8.30e-11 |
+| interrogation | DQN | -0.3478 | 8.08e-11 |
+| ultimatum | A2C | -0.3515 | 7.79e-09 |
+| tenders | DQN | -0.3586 | 0.00e+00 |
+| bertrand | DQN | -0.3741 | 9.06e-13 |
+| public_goods | PPO | -0.3819 | 2.29e-09 |
+
+Algorithm wins: DQN=9, A2C=5, PPO=4. Only 3/18 games achieve positive reward.
+
 ## Determinism Notes
 - deterministic profile selection and tell generation per `(game, seed)`
 - deterministic simulator dynamics and noise streams
